@@ -698,3 +698,12 @@
         margin: 0 0 12px 0;
     }
 }
+
+/* ---- Fix trust badge standalone section ---- */
+.hero-trust-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
