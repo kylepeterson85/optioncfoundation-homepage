@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Option C Foundation</title>
+  <meta name="description" content="Thank you for submitting your interest form. Our team will review your information and reach out if it looks like a potential fit." />
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    .thankyou-section {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 24px;
+      background: var(--light-bg);
+    }
+    .thankyou-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
+      padding: 56px 48px;
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+    .thankyou-icon {
+      width: 72px;
+      height: 72px;
+      background: var(--green-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      color: var(--green);
+    }
+    .thankyou-card h1 {
+      font-size: clamp(24px, 3vw, 32px);
+      color: var(--text-dark);
+      margin-bottom: 16px;
+    }
+    .thankyou-card p {
+      font-size: 16px;
+      color: var(--text-mid);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .thankyou-steps {
+      background: var(--light-bg);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin: 28px 0;
+      text-align: left;
+    }
+    .thankyou-steps h3 {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-light);
+      margin-bottom: 16px;
+    }
+    .thankyou-step {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+    }
+    .thankyou-step:last-child { margin-bottom: 0; }
+    .t-step-num {
+      width: 24px; height: 24px;
+      background: var(--green);
+      color: var(--white);
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .t-step-text { font-size: 14px; color: var(--text-mid); line-height: 1.55; padding-top: 2px; }
+    .thankyou-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+    @media (max-width: 560px) {
+      .thankyou-card { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">C</span>
+        <span class="logo-text">Option C Foundation</span>
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Our Program</a>
+        <a href="#">Who We Help</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </nav>
+      <a href="qualify.html" class="btn btn-primary nav-cta">See If You Qualify</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="thankyou-section">
+    <div class="thankyou-card">
+      <div class="thankyou-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div class="section-tag" style="display:inline-block; margin-bottom:16px;">Form Received</div>
+      <h1>Thank You for Reaching Out</h1>
+      <p>Your interest form has been submitted. Our team will review your information and reach out within a few business days if it looks like a potential fit for the program.</p>
+      <p>In the meantime, you're welcome to learn more about Option C and what the program involves.</p>
+
+      <div class="thankyou-steps">
+        <h3>What Happens Next</h3>
+        <div class="thankyou-step">
+          <div class="t-step-num">1</div>
+          <div class="t-step-text"><strong>Team review</strong> — We read every submission and look for program fit.</div>
+        </div>
+        <div class="thankyou-step">
+          <div class="t-step-num">2</div>
+          <div class="t-step-text"><strong>Discovery call</strong> — If it looks like a fit, we'll reach out to schedule a short virtual call.</div>
+        </div>
+        <div class="thankyou-step">
+          <div class="t-step-num">3</div>
+          <div class="t-step-text"><strong>Program decision</strong> — We'll let you know if you've been accepted and walk you through next steps.</div>
+        </div>
+      </div>
+
+      <div class="thankyou-actions">
+        <a href="index.html" class="btn btn-primary">Back to Homepage</a>
+        <a href="mailto:info@optioncfoundation.org" class="btn btn-outline">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo footer-logo">
+          <span class="logo-mark">C</span>
+          <span class="logo-text">Option C Foundation</span>
+        </a>
+        <p>Helping people build another path through entrepreneurship.</p>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2024 Option C Foundation. All rights reserved. 501(c)(3) Nonprofit Organization.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

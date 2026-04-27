@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>See If You Qualify | Option C Foundation</title>
+  <meta name="description" content="Apply to Option C Foundation's free entrepreneurship support program. Adults facing employment barriers may qualify for free business training, mentorship, and launch support." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="qualify.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">C</span>
+        <span class="logo-text">Option C Foundation</span>
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Our Program</a>
+        <a href="#">Who We Help</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </nav>
+      <a href="qualify.html" class="btn btn-primary nav-cta">See If You Qualify</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <div class="section-tag">Get Started</div>
+      <h1>See If You Qualify</h1>
+      <p>Complete this short interest form and our team will review your information. If it looks like a potential fit, we'll reach out to schedule a discovery call — at no cost and with no commitment required.</p>
+      <div class="hero-trust-row">
+        <div class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Free Program
+        </div>
+        <div class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          No Commitment
+        </div>
+        <div class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          501(c)(3) Nonprofit
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="qualify-layout container">
+
+    <!-- LEFT: FORM -->
+    <main class="qualify-form-wrap">
+      <div class="form-card">
+        <h2>Interest Form</h2>
+        <p class="form-intro">This form takes about 5 minutes. All information is kept confidential and is used only to assess program fit.</p>
+
+        <!-- Netlify Form -->
+        <form
+          name="qualify-interest"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/thank-you.html"
+          class="qualify-form"
+          id="qualify-form"
+          novalidate
+        >
+          <!-- Netlify hidden fields -->
+          <input type="hidden" name="form-name" value="qualify-interest" />
+          <p class="hidden-field" aria-hidden="true">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <!-- SECTION 1: Contact Info -->
+          <fieldset>
+            <legend>Your Contact Information</legend>
+            <div class="form-row cols-2">
+              <div class="form-group">
+                <label for="first-name">First Name <span class="required">*</span></label>
+                <input type="text" id="first-name" name="first_name" placeholder="First name" required />
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name <span class="required">*</span></label>
+                <input type="text" id="last-name" name="last_name" placeholder="Last name" required />
+              </div>
+            </div>
+            <div class="form-row cols-2">
+              <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number <span class="optional">(optional)</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" />
+              </div>
+            </div>
+            <div class="form-row cols-2">
+              <div class="form-group">
+                <label for="city">City <span class="required">*</span></label>
+                <input type="text" id="city" name="city" placeholder="Your city" required />
+              </div>
+              <div class="form-group">
+                <label for="state">State <span class="required">*</span></label>
+                <select id="state" name="state" required>
+                  <option value="">Select state</option>
+                  <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option>
+                  <option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option>
+                  <option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option>
+                  <option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option>
+                  <option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option>
+                  <option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option>
+                  <option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option>
+                  <option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option>
+                  <option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option>
+                  <option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option>
+                  <option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option>
+                  <option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option>
+                  <option>Wisconsin</option><option>Wyoming</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- SECTION 2: Background -->
+          <fieldset>
+            <legend>Your Background</legend>
+            <div class="form-group">
+              <label>Which best describes your situation? <span class="required">*</span></label>
+              <p class="field-note">Select all that apply. This helps us understand how we may be able to support you.</p>
+              <div class="checkbox-group">
+                <label class="checkbox-item">
+                  <input type="checkbox" name="barrier[]" value="disability" />
+                  <span class="checkmark"></span>
+                  I have a disability or health condition that limits traditional employment
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="barrier[]" value="prior_conviction" />
+                  <span class="checkmark"></span>
+                  I have a prior felony conviction
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="barrier[]" value="long_term_unemployed" />
+                  <span class="checkmark"></span>
+                  I have been unemployed or underemployed for an extended period
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="barrier[]" value="limited_resources" />
+                  <span class="checkmark"></span>
+                  I lack access to mentorship, training, or startup resources
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="barrier[]" value="other" />
+                  <span class="checkmark"></span>
+                  Other barrier not listed above
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="currently-working">What is your current employment situation? <span class="required">*</span></label>
+              <select id="currently-working" name="employment_status" required>
+                <option value="">Select one</option>
+                <option>Not currently employed</option>
+                <option>Part-time employed</option>
+                <option>Full-time employed but looking for another path</option>
+                <option>Self-employed / freelancing informally</option>
+                <option>Receiving disability benefits</option>
+                <option>In a reentry or transitional program</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <!-- SECTION 3: Business Idea -->
+          <fieldset>
+            <legend>Your Business Idea</legend>
+            <div class="form-group">
+              <label for="has-idea">Do you currently have a business idea in mind? <span class="required">*</span></label>
+              <select id="has-idea" name="has_business_idea" required>
+                <option value="">Select one</option>
+                <option>Yes — I have a specific idea I want to develop</option>
+                <option>Somewhat — I have a general direction but need help clarifying it</option>
+                <option>No — I need help choosing and validating a business idea</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="business-description">Briefly describe your business idea or area of interest <span class="optional">(optional)</span></label>
+              <p class="field-note">Don't worry if it's not fully formed. A few sentences is fine.</p>
+              <textarea id="business-description" name="business_description" rows="4" placeholder="For example: I want to offer mobile car detailing services in my area. I've detailed cars for friends but never had a formal business."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="goal">What is your primary goal in applying to this program? <span class="required">*</span></label>
+              <select id="goal" name="primary_goal" required>
+                <option value="">Select one</option>
+                <option>Generate income to support myself or my family</option>
+                <option>Build long-term financial independence</option>
+                <option>Create a legitimate business to move past my background</option>
+                <option>Build around a disability or health limitation</option>
+                <option>I'm not sure yet — I want to explore my options</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <!-- SECTION 4: Additional Info -->
+          <fieldset>
+            <legend>A Few More Questions</legend>
+            <div class="form-group">
+              <label for="heard-about">How did you hear about Option C Foundation? <span class="optional">(optional)</span></label>
+              <select id="heard-about" name="referral_source">
+                <option value="">Select one</option>
+                <option>Google search</option>
+                <option>Referred by a friend or family member</option>
+                <option>Referred by a reentry or workforce program</option>
+                <option>Referred by a disability services organization</option>
+                <option>Social media</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="additional-info">Is there anything else you'd like us to know? <span class="optional">(optional)</span></label>
+              <textarea id="additional-info" name="additional_info" rows="3" placeholder="Any additional context about your situation, goals, or questions you have about the program."></textarea>
+            </div>
+
+            <div class="form-group consent-group">
+              <label class="checkbox-item">
+                <input type="checkbox" name="consent" value="yes" required />
+                <span class="checkmark"></span>
+                I understand that submitting this form does not guarantee program acceptance. I agree to be contacted by Option C Foundation to discuss my application. <span class="required">*</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-submit-area">
+            <button type="submit" class="btn btn-primary btn-lg submit-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Submit Interest Form
+            </button>
+            <p class="submit-note">No cost. No commitment. Our team will review your submission and reach out within a few business days if it looks like a potential fit.</p>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- RIGHT: SIDEBAR -->
+    <aside class="qualify-sidebar">
+
+      <div class="sidebar-card what-happens">
+        <h3>What Happens Next</h3>
+        <ol class="next-steps-list">
+          <li>
+            <div class="step-dot">1</div>
+            <div>
+              <strong>We review your form</strong>
+              <p>Our team reads every submission and looks for potential fit with the program.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-dot">2</div>
+            <div>
+              <strong>Discovery call</strong>
+              <p>If it looks like a fit, we'll reach out to schedule a short virtual call to learn more about your goals.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-dot">3</div>
+            <div>
+              <strong>Program decision</strong>
+              <p>We'll let you know if you've been accepted and walk you through what participation looks like.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="sidebar-card eligibility-card">
+        <h3>Who May Qualify</h3>
+        <ul class="eligibility-list">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/></svg>
+            Adults in the United States
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/></svg>
+            People with a disability or health limitation
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/></svg>
+            People with a prior felony conviction
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/></svg>
+            Long-term unemployed or underemployed adults
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/></svg>
+            Motivated to pursue small business ownership
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card program-is-card">
+        <h3>This Program Is</h3>
+        <div class="is-item yes">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Free for qualified participants
+        </div>
+        <div class="is-item yes">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Remote — work from anywhere in the U.S.
+        </div>
+        <div class="is-item yes">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Focused on lawful small businesses
+        </div>
+        <div class="is-item no">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          Not a loan or investment program
+        </div>
+        <div class="is-item no">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          Not a guaranteed income source
+        </div>
+      </div>
+
+      <div class="sidebar-card questions-card">
+        <h3>Have a Question?</h3>
+        <p>If you're not sure whether to apply, or you have a question about the program, feel free to reach out before submitting.</p>
+        <a href="mailto:info@optioncfoundation.org" class="btn btn-outline sidebar-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@optioncfoundation.org
+        </a>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ===== DISCLAIMER ===== -->
+  <div class="qualify-disclaimer">
+    <div class="container">
+      <p>Option C Foundation provides education, mentorship, and business support. Submitting this form does not guarantee acceptance into the program. Participation does not guarantee business success, income, funding, or employment. We review each application individually and contact applicants we believe may be a good fit.</p>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo footer-logo">
+          <span class="logo-mark">C</span>
+          <span class="logo-text">Option C Foundation</span>
+        </a>
+        <p>Helping people build another path through entrepreneurship.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#">About</a>
+        <a href="#">Our Program</a>
+        <a href="#">Who We Help</a>
+        <a href="#">Contact</a>
+        <a href="#">Donate</a>
+      </nav>
+      <div class="footer-bottom">
+        <p class="footer-disclaimer">Option C Foundation provides education, mentorship, and business support. Participation does not guarantee business success, income, funding, or employment.</p>
+        <p class="footer-copy">&copy; 2024 Option C Foundation. All rights reserved. 501(c)(3) Nonprofit Organization.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
