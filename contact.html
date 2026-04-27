@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Option C Foundation</title>
+  <meta name="description" content="Contact Option C Foundation. Reach out with questions about the program, partnership opportunities, donations, or general inquiries. Based in Charlotte, NC — serving participants nationwide." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="qualify.css" />
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">C</span>
+        <span class="logo-text">Option C Foundation</span>
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="program.html">Our Program</a>
+        <a href="#">Who We Help</a>
+        <a href="#">Blog</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <a href="qualify.html" class="btn btn-primary nav-cta">See If You Qualify</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero page-hero-sm">
+    <div class="container page-hero-inner">
+      <div class="section-tag">Contact Us</div>
+      <h1>Get in Touch</h1>
+      <p>Have a question about the program, a partnership idea, or something else? We're happy to hear from you. Use the form below or reach out directly by email.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT REASONS ===== -->
+  <section class="contact-reasons-bar">
+    <div class="container contact-reasons-inner">
+      <a href="#contact-form" class="reason-chip active">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        General Inquiry
+      </a>
+      <a href="qualify.html" class="reason-chip">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        Apply to the Program
+      </a>
+      <a href="#contact-form" class="reason-chip">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Partner / Refer
+      </a>
+      <a href="#contact-form" class="reason-chip">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Donate / Support
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="contact-layout container" id="contact-form">
+
+    <!-- LEFT: FORM -->
+    <main class="contact-form-wrap">
+      <div class="form-card">
+        <h2>Send Us a Message</h2>
+        <p class="form-intro">Use this form for general questions, partnership inquiries, media requests, or anything else. If you're looking to apply to the program, please use the <a href="qualify.html">interest form instead</a>.</p>
+
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/contact-thanks.html"
+          class="qualify-form"
+          id="contact-form-el"
+          novalidate
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden-field" aria-hidden="true">
+            <label>Don't fill this: <input name="bot-field" /></label>
+          </p>
+
+          <div class="form-row cols-2">
+            <div class="form-group">
+              <label for="contact-name">Your Name <span class="required">*</span></label>
+              <input type="text" id="contact-name" name="name" placeholder="Full name" required />
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email Address <span class="required">*</span></label>
+              <input type="email" id="contact-email" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-reason">What is this about? <span class="required">*</span></label>
+            <select id="contact-reason" name="reason" required>
+              <option value="">Select a reason</option>
+              <option>Question about the program</option>
+              <option>Partnership or referral opportunity</option>
+              <option>Volunteer or mentorship interest</option>
+              <option>Donation or funding inquiry</option>
+              <option>Media or press inquiry</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-org">Organization (if applicable) <span class="optional">(optional)</span></label>
+            <input type="text" id="contact-org" name="organization" placeholder="Organization or company name" />
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message">Message <span class="required">*</span></label>
+            <textarea id="contact-message" name="message" rows="6" placeholder="Tell us what's on your mind. The more context you provide, the better we can respond." required></textarea>
+          </div>
+
+          <div class="form-submit-area">
+            <button type="submit" class="btn btn-primary btn-lg submit-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
+            <p class="submit-note">We aim to respond to all messages within 2–3 business days.</p>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- RIGHT: SIDEBAR -->
+    <aside class="contact-sidebar">
+
+      <div class="sidebar-card contact-info-card">
+        <h3>Contact Information</h3>
+        <div class="contact-info-list">
+          <div class="contact-info-item">
+            <div class="ci-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="ci-label">Email</div>
+              <a href="mailto:info@optioncfoundation.org" class="ci-value">info@optioncfoundation.org</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="ci-label">Location</div>
+              <div class="ci-value">Charlotte, NC</div>
+              <div class="ci-sub">Remote-first — serving participants nationally</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="ci-label">Response Time</div>
+              <div class="ci-value">2–3 business days</div>
+              <div class="ci-sub">We read and respond to every message</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card contact-by-type">
+        <h3>Who Should Contact Us</h3>
+        <div class="contact-type-list">
+          <div class="contact-type">
+            <div class="ct-icon bg-green-light">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            </div>
+            <div>
+              <div class="ct-label">Potential Participants</div>
+              <div class="ct-desc">Questions before applying? Use the contact form, or go directly to the <a href="qualify.html">interest form</a>.</div>
+            </div>
+          </div>
+          <div class="contact-type">
+            <div class="ct-icon bg-navy-light">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <div class="ct-label">Referral Partners</div>
+              <div class="ct-desc">Reentry programs, disability services, workforce orgs — contact us to discuss referral arrangements.</div>
+            </div>
+          </div>
+          <div class="contact-type">
+            <div class="ct-icon bg-gold-light">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <div>
+              <div class="ct-label">Donors &amp; Supporters</div>
+              <div class="ct-desc">Questions about giving or sponsorship? Reach out and we'll follow up with details.</div>
+            </div>
+          </div>
+          <div class="contact-type">
+            <div class="ct-icon bg-teal-light">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div>
+              <div class="ct-label">Volunteer Mentors</div>
+              <div class="ct-desc">Experienced business owners interested in mentorship — we'd love to hear from you.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card apply-nudge">
+        <div class="apply-nudge-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <h3>Looking to Apply?</h3>
+        <p>If you're interested in the program for yourself, please use the interest form rather than the contact form — it gets your information to the right place faster.</p>
+        <a href="qualify.html" class="btn btn-primary full-width">See If You Qualify</a>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ===== NOT SURE SECTION ===== -->
+  <section class="section bg-light not-sure-section">
+    <div class="container">
+      <div class="section-intro center">
+        <h2>Not Sure Where to Start?</h2>
+        <p class="section-desc">Here's a quick guide to help you find the right path.</p>
+      </div>
+      <div class="path-cards">
+        <div class="path-card">
+          <div class="path-icon bg-green-light">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          </div>
+          <h3>I want to apply for the program</h3>
+          <p>If you or someone you know faces employment barriers and is interested in entrepreneurship, start with the interest form.</p>
+          <a href="qualify.html" class="btn btn-primary full-width">See If You Qualify →</a>
+        </div>
+        <div class="path-card">
+          <div class="path-icon bg-navy-light">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>I want to refer someone or partner</h3>
+          <p>If you work with adults who may benefit from this program, use the contact form and select "Partnership or referral opportunity."</p>
+          <a href="#contact-form" class="btn btn-outline full-width">Contact Us →</a>
+        </div>
+        <div class="path-card">
+          <div class="path-icon bg-gold-light">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3>I want to donate or support</h3>
+          <p>Donors and supporters are essential to keeping this program free. Use the contact form to ask about giving options.</p>
+          <a href="#contact-form" class="btn btn-outline full-width">Get in Touch →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo footer-logo">
+          <span class="logo-mark">C</span>
+          <span class="logo-text">Option C Foundation</span>
+        </a>
+        <p>Helping people build another path through entrepreneurship.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="about.html">About</a>
+        <a href="program.html">Our Program</a>
+        <a href="#">Who We Help</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Donate</a>
+      </nav>
+      <div class="footer-bottom">
+        <p class="footer-disclaimer">Option C Foundation provides education, mentorship, and business support. Participation does not guarantee business success, income, funding, or employment.</p>
+        <p class="footer-copy">&copy; 2024 Option C Foundation. All rights reserved. 501(c)(3) Nonprofit Organization.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

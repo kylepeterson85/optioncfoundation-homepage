@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Message Received | Option C Foundation</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    .thankyou-section { min-height: 70vh; display: flex; align-items: center; justify-content: center; padding: 80px 24px; background: var(--light-bg); }
+    .thankyou-card { background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border: 1px solid var(--border); padding: 56px 48px; max-width: 560px; width: 100%; text-align: center; }
+    .thankyou-icon { width: 72px; height: 72px; background: var(--navy-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; color: var(--navy); }
+    .thankyou-card h1 { font-size: clamp(22px, 3vw, 30px); color: var(--text-dark); margin-bottom: 14px; }
+    .thankyou-card p { font-size: 16px; color: var(--text-mid); line-height: 1.7; margin-bottom: 12px; }
+    .thankyou-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+    @media (max-width: 560px) { .thankyou-card { padding: 36px 24px; } }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">C</span>
+        <span class="logo-text">Option C Foundation</span>
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="program.html">Our Program</a>
+        <a href="#">Who We Help</a>
+        <a href="#">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="qualify.html" class="btn btn-primary nav-cta">See If You Qualify</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="thankyou-section">
+    <div class="thankyou-card">
+      <div class="thankyou-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </div>
+      <div class="section-tag" style="display:inline-block; margin-bottom:16px;">Message Sent</div>
+      <h1>We Got Your Message</h1>
+      <p>Thank you for reaching out to Option C Foundation. We read every message and aim to respond within 2–3 business days.</p>
+      <p>If your inquiry is time-sensitive, you're also welcome to email us directly at <a href="mailto:info@optioncfoundation.org" style="color:var(--green);font-weight:600;">info@optioncfoundation.org</a>.</p>
+      <div class="thankyou-actions">
+        <a href="index.html" class="btn btn-primary">Back to Homepage</a>
+        <a href="qualify.html" class="btn btn-outline">See If You Qualify</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo footer-logo">
+          <span class="logo-mark">C</span>
+          <span class="logo-text">Option C Foundation</span>
+        </a>
+        <p>Helping people build another path through entrepreneurship.</p>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2024 Option C Foundation. All rights reserved. 501(c)(3) Nonprofit Organization.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

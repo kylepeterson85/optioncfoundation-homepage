@@ -1,0 +1,159 @@
+/* ============================================
+   CONTACT PAGE — contact.css
+   ============================================ */
+
+/* ---- Active nav ---- */
+.main-nav a.active { color: var(--navy); background: var(--light-bg); font-weight: 700; }
+
+/* ---- Smaller hero ---- */
+.page-hero-sm { padding: 48px 0 44px; }
+.page-hero-sm h1 { font-size: clamp(28px, 4vw, 40px); }
+
+/* ---- Reasons bar ---- */
+.contact-reasons-bar {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 0;
+}
+.contact-reasons-inner {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.reason-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-mid);
+  background: var(--light-bg);
+  border: 1.5px solid var(--border);
+  padding: 7px 14px;
+  border-radius: 100px;
+  transition: all 0.18s;
+  text-decoration: none;
+}
+.reason-chip:hover,
+.reason-chip.active {
+  background: var(--green-light);
+  border-color: var(--green);
+  color: var(--green);
+}
+.reason-chip svg { color: inherit; }
+
+/* ---- Contact Layout ---- */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 40px;
+  padding-top: 48px;
+  padding-bottom: 64px;
+  align-items: start;
+}
+
+/* ---- Form card (reuses qualify.css form styles) ---- */
+.contact-form-wrap .form-card h2 { margin-bottom: 8px; }
+.contact-form-wrap .form-intro a {
+  color: var(--green);
+  font-weight: 600;
+  text-decoration: none;
+}
+.contact-form-wrap .form-intro a:hover { text-decoration: underline; }
+
+/* ---- Contact Sidebar ---- */
+.contact-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 88px;
+}
+.sidebar-card { background: var(--white); border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow-sm); padding: 24px; }
+.sidebar-card h3 { font-size: 16px; font-weight: 700; color: var(--text-dark); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+
+/* Contact info list */
+.contact-info-list { display: flex; flex-direction: column; gap: 16px; }
+.contact-info-item { display: flex; gap: 12px; align-items: flex-start; }
+.ci-icon {
+  width: 36px; height: 36px;
+  background: var(--navy-light);
+  color: var(--navy);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.ci-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-light); margin-bottom: 3px; }
+.ci-value { font-size: 14px; font-weight: 600; color: var(--text-dark); text-decoration: none; }
+a.ci-value { color: var(--green); }
+a.ci-value:hover { text-decoration: underline; }
+.ci-sub { font-size: 12px; color: var(--text-light); margin-top: 2px; line-height: 1.4; }
+
+/* Contact by type */
+.contact-type-list { display: flex; flex-direction: column; gap: 14px; }
+.contact-type { display: flex; gap: 12px; align-items: flex-start; }
+.ct-icon {
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.ct-label { font-size: 13px; font-weight: 700; color: var(--text-dark); margin-bottom: 3px; }
+.ct-desc { font-size: 12px; color: var(--text-light); line-height: 1.5; }
+.ct-desc a { color: var(--green); font-weight: 600; text-decoration: none; }
+.ct-desc a:hover { text-decoration: underline; }
+
+/* Apply nudge card */
+.apply-nudge { background: var(--green-light); border-color: rgba(46,125,85,0.25); text-align: center; }
+.apply-nudge h3 { border-bottom-color: rgba(46,125,85,0.2); color: var(--green); }
+.apply-nudge-icon {
+  width: 44px; height: 44px;
+  background: var(--white);
+  color: var(--green);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 12px;
+  box-shadow: var(--shadow-sm);
+}
+.apply-nudge p { font-size: 13px; color: var(--text-mid); line-height: 1.65; margin-bottom: 16px; }
+
+/* ---- Not Sure Section ---- */
+.not-sure-section { background: var(--light-bg); }
+.path-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.path-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.path-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.path-icon {
+  width: 52px; height: 52px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+}
+.path-card h3 { font-size: 16px; font-weight: 700; color: var(--text-dark); margin: 0; }
+.path-card p  { font-size: 14px; color: var(--text-mid); line-height: 1.65; margin: 0; flex: 1; }
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .contact-layout { grid-template-columns: 1fr; }
+  .contact-sidebar { position: static; order: -1; display: grid; grid-template-columns: 1fr 1fr; }
+  .apply-nudge { grid-column: span 2; }
+}
+@media (max-width: 768px) {
+  .path-cards { grid-template-columns: 1fr; }
+  .contact-sidebar { grid-template-columns: 1fr; }
+  .apply-nudge { grid-column: auto; }
+  .contact-reasons-inner { gap: 8px; }
+}
