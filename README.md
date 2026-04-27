@@ -1,32 +1,14 @@
-# Option C Foundation — Homepage Draft
+# Option C Foundation — Website
 
-Static homepage draft for [Option C Foundation](https://optioncfoundation.org).
+**Live site:** https://optioncfoundation-homepage.netlify.app  
+**GitHub repo:** https://github.com/kylepeterson85/optioncfoundation-homepage  
+**Owner:** Kyle K. Peterson · info@optioncfoundation.org  
+**Last major update:** April 27, 2026
 
-## Files
+---
 
-- `index.html` — Full homepage markup
-- `style.css` — All styles (CSS variables, responsive)
-- `script.js` — Mobile nav, FAQ accordion, smooth scroll
+## 1. Project Overview
 
-## Sections
+This is the static website for **Option C Foundation**, a registered 501(c)(3) nonprofit based in Charlotte, NC. The foundation provides free entrepreneurship training, mentorship, and launch support to adults facing employment barriers — including people with disabilities, people with prior felony convictions, and long-term unemployed adults.
 
-1. Header / Navigation
-2. Hero
-3. Why Option C Exists
-4. Who We Help
-5. What Participants Receive
-6. How It Works
-7. Mission / Credibility
-8. Founder / Leadership
-9. Support the Mission
-10. Impact / Need
-11. FAQ
-12. Final CTA
-13. Footer
-
-## Notes
-
-- This is a draft prototype only. All links use `#` placeholders.
-- No fake testimonials, fake statistics, or fake partner logos.
-- Designed for Google Ad Grants compliance.
-- Ready to be ported into WordPress/Elementor section by section.
+The site was built as a clean static HTML/CSS/JS site hosted on **Netlify**, deployed directly from this GitHub repository. It replaces
