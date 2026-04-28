@@ -14,27 +14,8 @@
 </head>
 <body>
 
-  <!-- ===== HEADER ===== -->
-  <header class="site-header" id="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-mark">C</span>
-        <span class="logo-text">Option C Foundation</span>
-      </a>
-      <nav class="main-nav" id="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="program.html">Our Program</a>
-        <a href="who-we-help.html">Who We Help</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <a href="qualify.html" class="btn btn-primary nav-cta">See If You Qualify</a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
+  <!-- ===== HEADER (loaded from /components/header.html) ===== -->
+  <div id="header-placeholder"></div>
 
   <!-- ===== HERO ===== -->
   <section class="donate-hero">
@@ -360,31 +341,61 @@
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="index.html" class="logo footer-logo">
-          <span class="logo-mark">C</span>
-          <span class="logo-text">Option C Foundation</span>
-        </a>
-        <p>Helping people build another path through entrepreneurship.</p>
+  
+  <!-- ===== HOW DONATIONS ARE USED ===== -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-intro center">
+        <div class="section-tag">Transparency</div>
+        <h2>How Your Donation Is Used</h2>
+        <p class="section-desc">We believe donors deserve to know exactly where their money goes. Every dollar given to Option C Foundation supports our mission of helping adults facing employment barriers build legitimate small businesses.</p>
       </div>
-      <nav class="footer-nav">
-        <a href="about.html">About</a>
-        <a href="program.html">Our Program</a>
-        <a href="who-we-help.html">Who We Help</a>
-        <a href="contact.html">Contact</a>
-        <a href="donate.html">Donate</a>
-      </nav>
-      <div class="footer-bottom">
-        <p class="footer-disclaimer">Option C Foundation provides education, mentorship, and business support. Participation does not guarantee business success, income, funding, or employment.</p>
-        <p class="footer-copy">&copy; 2024 Option C Foundation. All rights reserved. 501(c)(3) Nonprofit Organization.</p>
+      <div class="card-grid cols-1" style="max-width:680px;margin:0 auto;">
+        <div class="card" style="padding:0;overflow:hidden;">
+          <div style="padding:8px 0;">
+            <div style="display:flex;align-items:center;gap:16px;padding:18px 28px;border-bottom:1px solid var(--border);">
+              <div style="flex-shrink:0;width:44px;height:44px;background:var(--green-light);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--green);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </div>
+              <div style="flex:1;"><div style="font-weight:600;font-size:15px;color:var(--text-dark);margin-bottom:2px;">Program Education &amp; Curriculum</div><div style="font-size:14px;color:var(--text-mid);">Business planning resources, training materials, and structured learning tools for participants</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;padding:18px 28px;border-bottom:1px solid var(--border);">
+              <div style="flex-shrink:0;width:44px;height:44px;background:var(--navy-light);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--navy);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div style="flex:1;"><div style="font-weight:600;font-size:15px;color:var(--text-dark);margin-bottom:2px;">Mentor Coordination</div><div style="font-size:14px;color:var(--text-mid);">Recruiting, onboarding, and supporting mentors who provide real-world guidance to participants</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;padding:18px 28px;border-bottom:1px solid var(--border);">
+              <div style="flex-shrink:0;width:44px;height:44px;background:var(--teal-light);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--teal);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <div style="flex:1;"><div style="font-weight:600;font-size:15px;color:var(--text-dark);margin-bottom:2px;">Participant Digital Support</div><div style="font-size:14px;color:var(--text-mid);">Helping participants establish a web presence and digital tools to look credible and get found online</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;padding:18px 28px;border-bottom:1px solid var(--border);">
+              <div style="flex-shrink:0;width:44px;height:44px;background:var(--gold-light);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--gold);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+              <div style="flex:1;"><div style="font-weight:600;font-size:15px;color:var(--text-dark);margin-bottom:2px;">Outreach &amp; Application Review</div><div style="font-size:14px;color:var(--text-mid);">Connecting with referral partners and reviewing applications to identify qualified participants</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;padding:18px 28px;">
+              <div style="flex-shrink:0;width:44px;height:44px;background:var(--light-bg);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--text-mid);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div style="flex:1;"><div style="font-weight:600;font-size:15px;color:var(--text-dark);margin-bottom:2px;">Administrative Operations</div><div style="font-size:14px;color:var(--text-mid);">Nonprofit compliance, communications, and the infrastructure that keeps the organization running</div></div>
+            </div>
+          </div>
+        </div>
+        <p style="font-size:13px;color:var(--text-mid);text-align:center;margin-top:12px;">Donations are tax-deductible to the extent permitted by law. EIN: 41-3208039.</p>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script src="script.js"></script>
+<!-- ===== FOOTER ===== -->
+    <!-- ===== FOOTER (loaded from /components/footer.html) ===== -->
+  <div id="footer-placeholder"></div>
+
+  <script src="/components/loader.js"></script>
+  <script src="/script.js"></script>
   <script src="donate.js"></script>
 </body>
 </html>
