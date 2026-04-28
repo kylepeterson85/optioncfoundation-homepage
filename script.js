@@ -1,33 +1,42 @@
 // ===== Option C Foundation — script.js =====
 
-// ---- Mobile Nav Toggle ----
-const navToggle = document.getElementById('nav-toggle');
-const mainNav   = document.getElementById('main-nav');
+// ---- Components-dependent code ----
+// The header and footer are injected asynchronously by /components/loader.js.
+// Everything that touches #nav-toggle, #main-nav, or #site-header must wait
+// for the "componentsLoaded" event before querying those elements.
 
-if (navToggle && mainNav) {
-  navToggle.addEventListener('click', () => {
-    mainNav.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', mainNav.classList.contains('open'));
-  });
+document.addEventListener('componentsLoaded', () => {
 
-  // Close nav when a link is clicked
-  mainNav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mainNav.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
+  // ---- Mobile Nav Toggle ----
+  const navToggle = document.getElementById('nav-toggle');
+  const mainNav   = document.getElementById('main-nav');
+
+  if (navToggle && mainNav) {
+    navToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', mainNav.classList.contains('open'));
     });
-  });
-}
 
-// ---- Sticky Header Shadow on Scroll ----
-const header = document.getElementById('site-header');
-if (header) {
-  window.addEventListener('scroll', () => {
-    header.style.boxShadow = window.scrollY > 10
-      ? '0 4px 20px rgba(0,0,0,0.1)'
-      : '0 2px 8px rgba(0,0,0,0.06)';
-  });
-}
+    // Close nav when a link is clicked
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // ---- Sticky Header Shadow on Scroll ----
+  const header = document.getElementById('site-header');
+  if (header) {
+    window.addEventListener('scroll', () => {
+      header.style.boxShadow = window.scrollY > 10
+        ? '0 4px 20px rgba(0,0,0,0.1)'
+        : '0 2px 8px rgba(0,0,0,0.06)';
+    });
+  }
+
+});
 
 // ---- FAQ Accordion ----
 const faqQuestions = document.querySelectorAll('.faq-question');
