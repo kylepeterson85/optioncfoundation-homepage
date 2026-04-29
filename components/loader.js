@@ -6,7 +6,17 @@
 
 (async function () {
 
-  // ---- Helper: fetch an HTML file and replace a placeholder element ----
+  
+// ---- Canonical tag ----
+// Declares the preferred URL for each page to prevent duplicate indexing.
+(function () {
+  const canonical = document.createElement('link');
+  canonical.rel = 'canonical';
+  canonical.href = 'https://optioncfoundation.org' + window.location.pathname.replace(/\.html$/, '').replace(/\/$/, '') + (window.location.pathname === '/' ? '/' : '');
+  document.head.appendChild(canonical);
+})();
+
+// ---- Helper: fetch an HTML file and replace a placeholder element ----
   async function injectComponent(placeholderId, path) {
     const placeholder = document.getElementById(placeholderId);
     if (!placeholder) return;
