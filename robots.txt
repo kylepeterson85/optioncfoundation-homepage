@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block utility and conversion pages from indexing
+Disallow: /thank-you
+Disallow: /contact-thanks
+Disallow: /PAGE-TEMPLATE
+
+Sitemap: https://optioncfoundation.org/sitemap.xml
