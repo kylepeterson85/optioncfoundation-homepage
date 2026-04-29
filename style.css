@@ -734,3 +734,69 @@ h3 { font-size: 19px; margin-bottom: 10px; font-weight: 700; }
   .hero { padding: 56px 0 64px; }
   .hero-card { max-width: 100%; }
 }
+
+/* ---- Photo Split Layout ---- */
+.photo-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.photo-split-image {
+  position: relative;
+}
+
+.split-photo {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  display: block;
+  box-shadow: var(--shadow-lg);
+}
+
+.photo-split-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.photo-split-text h2 {
+  margin-bottom: 16px;
+}
+
+.photo-split-text p {
+  color: var(--text-mid);
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+/* ---- Page Hero Photo (for About / Who We Help etc.) ---- */
+.page-hero-photo {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: var(--radius-lg);
+  display: block;
+  margin-bottom: 40px;
+  box-shadow: var(--shadow-md);
+}
+
+/* ---- Blog card image ---- */
+.blog-card-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .photo-split {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .photo-split-image { order: -1; }
+}
