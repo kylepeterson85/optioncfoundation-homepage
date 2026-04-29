@@ -800,3 +800,13 @@ h3 { font-size: 19px; margin-bottom: 10px; font-weight: 700; }
   }
   .photo-split-image { order: -1; }
 }
+
+/* ---- Blog card image (actual img tag) ---- */
+.blog-card-img-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
