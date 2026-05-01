@@ -14,26 +14,8 @@
 </head>
 <body>
 
-  <header class="site-header" id="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-mark">C</span>
-        <span class="logo-text">Option C Foundation</span>
-      </a>
-      <nav class="main-nav" id="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="program.html">Our Program</a>
-        <a href="who-we-help.html">Who We Help</a>
-        <a href="blog.html" class="active">Blog</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <a href="qualify.html" class="btn btn-primary nav-cta">See If You Qualify</a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
+    <!-- ===== HEADER (loaded from /components/header.html) ===== -->
+  <div id="header-placeholder"></div>
 
   <div class="post-layout container">
     <article class="post-article">
@@ -145,7 +127,7 @@
       </div>
       <div class="post-share">
         <span>Share this article:</span>
-        <a href="#" class="share-btn" aria-label="Copy link">
+        <a href="#" class="share-btn" aria-label="Copy link" onclick="event.preventDefault();navigator.clipboard.writeText(window.location.href);">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           Copy Link
         </a>
@@ -186,30 +168,9 @@
     </aside>
   </div>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="index.html" class="logo footer-logo">
-          <span class="logo-mark">C</span>
-          <span class="logo-text">Option C Foundation</span>
-        </a>
-        <p>Helping people build another path through entrepreneurship.</p>
-      </div>
-      <nav class="footer-nav">
-        <a href="about.html">About</a>
-        <a href="program.html">Our Program</a>
-        <a href="who-we-help.html">Who We Help</a>
-        <a href="contact.html">Contact</a>
-        <a href="donate.html">Donate</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Use</a>
-      </nav>
-      <div class="footer-bottom">
-        <p class="footer-disclaimer">Option C Foundation provides education, mentorship, and business support. Participation does not guarantee business success, income, funding, or employment.</p>
-        <p class="footer-copy">&copy; 2024 Option C Foundation. All rights reserved. 501(c)(3) Nonprofit Organization.</p>
-      </div>
-    </div>
-  </footer>
-  <script src="script.js"></script>
+    <!-- ===== FOOTER (loaded from /components/footer.html) ===== -->
+  <div id="footer-placeholder"></div>
+  <script src="/script.js"></script>
+  <script src="/components/loader.js"></script>
 </body>
 </html>

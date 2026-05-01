@@ -14,27 +14,8 @@
 </head>
 <body>
 
-  <!-- ===== HEADER ===== -->
-  <header class="site-header" id="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-mark">C</span>
-        <span class="logo-text">Option C Foundation</span>
-      </a>
-      <nav class="main-nav" id="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="program.html">Our Program</a>
-        <a href="who-we-help.html">Who We Help</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <a href="qualify.html" class="btn btn-primary nav-cta">See If You Qualify</a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
+    <!-- ===== HEADER (loaded from /components/header.html) ===== -->
+  <div id="header-placeholder"></div>
 
   <!-- ===== HERO ===== -->
   <section class="legal-hero">
@@ -55,13 +36,13 @@
       </div>
 
       <div class="legal-section">
-        <h2>1. About Option C Foundation</h2>
+        <h2 id="section-1">1. About Option C Foundation</h2>
         <p>Option C Foundation is a registered 501(c)(3) nonprofit organization incorporated in the state of North Carolina. Our mission is to help adults who face barriers to traditional employment pursue economic independence through entrepreneurship by providing free business education, mentorship, and structured support to qualified participants.</p>
         <p>All program activities are directed toward this nonprofit mission. Option C Foundation does not operate for profit and does not distribute earnings to shareholders, officers, or directors.</p>
       </div>
 
       <div class="legal-section">
-        <h2>2. Use of This Website</h2>
+        <h2 id="section-2">2. Use of This Website</h2>
         <p>You may use this Site for lawful purposes only and in accordance with these Terms. You agree not to:</p>
         <ul>
           <li>Use the Site in any way that violates applicable federal, state, or local law</li>
@@ -75,7 +56,7 @@
       </div>
 
       <div class="legal-section">
-        <h2>3. Program Application and Participation</h2>
+        <h2 id="section-3">3. Program Application and Participation</h2>
         <p>Submitting an interest form or application on this Site does not guarantee acceptance into the Option C program. All applications are reviewed individually and acceptance is at the sole discretion of Option C Foundation.</p>
         <p>By submitting an interest form, you represent that:</p>
         <ul>
@@ -88,7 +69,7 @@
       </div>
 
       <div class="legal-section">
-        <h2>4. No Guarantee of Results</h2>
+        <h2 id="section-4">4. No Guarantee of Results</h2>
         <p>Option C Foundation provides education, mentorship, and business support. Participation in the program does not guarantee:</p>
         <ul>
           <li>Business success of any kind</li>
@@ -101,7 +82,7 @@
       </div>
 
       <div class="legal-section">
-        <h2>5. Not Professional Advice</h2>
+        <h2 id="section-5">5. Not Professional Advice</h2>
         <p>The content on this Site, including blog articles, program descriptions, and all other written materials, is provided for informational and educational purposes only. Nothing on this Site constitutes:</p>
         <ul>
           <li>Legal advice or a substitute for consultation with a licensed attorney</li>
@@ -113,43 +94,43 @@
       </div>
 
       <div class="legal-section">
-        <h2>6. Intellectual Property</h2>
+        <h2 id="section-6">6. Intellectual Property</h2>
         <p>All content on this Site — including but not limited to text, graphics, logos, icons, images, and the overall design — is the property of Option C Foundation and is protected by applicable copyright and intellectual property laws.</p>
         <p>You may not reproduce, distribute, modify, transmit, or use any content from this Site for commercial purposes without our prior written consent. You may share links to this Site and quote brief excerpts with appropriate attribution.</p>
         <p>The Option C Foundation name, logo, and related marks are property of Option C Foundation and may not be used without written permission.</p>
       </div>
 
       <div class="legal-section">
-        <h2>7. Third-Party Links</h2>
+        <h2 id="section-7">7. Third-Party Links</h2>
         <p>This Site may contain links to third-party websites that are not owned or operated by Option C Foundation. We provide these links for convenience only. We have no control over the content, privacy practices, or policies of third-party sites and accept no responsibility for them.</p>
         <p>Your use of any third-party site is at your own risk and subject to that site's terms and policies.</p>
       </div>
 
       <div class="legal-section">
-        <h2>8. Disclaimer of Warranties</h2>
+        <h2 id="section-8">8. Disclaimer of Warranties</h2>
         <p>This Site and its content are provided on an "as is" and "as available" basis without warranties of any kind, either express or implied. Option C Foundation disclaims all warranties, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
         <p>We do not warrant that the Site will be uninterrupted, error-free, or free of viruses or other harmful components. We do not warrant the accuracy, completeness, or timeliness of any content on the Site.</p>
       </div>
 
       <div class="legal-section">
-        <h2>9. Limitation of Liability</h2>
+        <h2 id="section-9">9. Limitation of Liability</h2>
         <p>To the fullest extent permitted by applicable law, Option C Foundation, its officers, directors, employees, and volunteers shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of this Site or your participation in our program, even if we have been advised of the possibility of such damages.</p>
         <p>Our total liability to you for any claim arising from these Terms or your use of this Site shall not exceed one hundred dollars ($100).</p>
       </div>
 
       <div class="legal-section">
-        <h2>10. Governing Law</h2>
+        <h2 id="section-10">10. Governing Law</h2>
         <p>These Terms of Use shall be governed by and construed in accordance with the laws of the State of North Carolina, without regard to its conflict of law principles. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts located in Mecklenburg County, North Carolina.</p>
       </div>
 
       <div class="legal-section">
-        <h2>11. Changes to These Terms</h2>
+        <h2 id="section-11">11. Changes to These Terms</h2>
         <p>We reserve the right to modify these Terms of Use at any time. Changes will be effective immediately upon posting to this page, and the "Last updated" date will be revised. Your continued use of the Site after any changes constitutes your acceptance of the revised Terms.</p>
         <p>We encourage you to review these Terms periodically.</p>
       </div>
 
       <div class="legal-section">
-        <h2>12. Contact</h2>
+        <h2 id="section-12">12. Contact</h2>
         <p>If you have questions about these Terms of Use, please contact us:</p>
         <div class="legal-contact-block">
           <p><strong>Option C Foundation</strong><br />
@@ -165,18 +146,18 @@
       <div class="sidebar-card">
         <h3>On This Page</h3>
         <nav class="legal-toc">
-          <a href="#" onclick="return false">1. About Option C</a>
-          <a href="#" onclick="return false">2. Use of Website</a>
-          <a href="#" onclick="return false">3. Program Application</a>
-          <a href="#" onclick="return false">4. No Guarantee of Results</a>
-          <a href="#" onclick="return false">5. Not Professional Advice</a>
-          <a href="#" onclick="return false">6. Intellectual Property</a>
-          <a href="#" onclick="return false">7. Third-Party Links</a>
-          <a href="#" onclick="return false">8. Disclaimer of Warranties</a>
-          <a href="#" onclick="return false">9. Limitation of Liability</a>
-          <a href="#" onclick="return false">10. Governing Law</a>
-          <a href="#" onclick="return false">11. Changes</a>
-          <a href="#" onclick="return false">12. Contact</a>
+          <a href="#section-1">1. About Option C</a>
+          <a href="#section-2">2. Use of Website</a>
+          <a href="#section-3">3. Program Application</a>
+          <a href="#section-4">4. No Guarantee of Results</a>
+          <a href="#section-5">5. Not Professional Advice</a>
+          <a href="#section-6">6. Intellectual Property</a>
+          <a href="#section-7">7. Third-Party Links</a>
+          <a href="#section-8">8. Disclaimer of Warranties</a>
+          <a href="#section-9">9. Limitation of Liability</a>
+          <a href="#section-10">10. Governing Law</a>
+          <a href="#section-11">11. Changes</a>
+          <a href="#section-12">12. Contact</a>
         </nav>
       </div>
       <div class="sidebar-card">
@@ -196,31 +177,10 @@
     </aside>
   </div>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="index.html" class="logo footer-logo">
-          <span class="logo-mark">C</span>
-          <span class="logo-text">Option C Foundation</span>
-        </a>
-        <p>Helping people build another path through entrepreneurship.</p>
-      </div>
-      <nav class="footer-nav">
-        <a href="about.html">About</a>
-        <a href="program.html">Our Program</a>
-        <a href="contact.html">Contact</a>
-        <a href="donate.html">Donate</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Use</a>
-      </nav>
-      <div class="footer-bottom">
-        <p class="footer-disclaimer">Option C Foundation provides education, mentorship, and business support. Participation does not guarantee business success, income, funding, or employment.</p>
-        <p class="footer-copy">&copy; 2024 Option C Foundation. All rights reserved. 501(c)(3) Nonprofit Organization.</p>
-      </div>
-    </div>
-  </footer>
+    <!-- ===== FOOTER (loaded from /components/footer.html) ===== -->
+  <div id="footer-placeholder"></div>
 
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
+  <script src="/components/loader.js"></script>
 </body>
 </html>
