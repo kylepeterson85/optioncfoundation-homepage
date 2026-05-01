@@ -6,17 +6,66 @@
 
 (async function () {
 
-  
-// ---- Canonical tag ----
-// Declares the preferred URL for each page to prevent duplicate indexing.
-(function () {
-  const canonical = document.createElement('link');
-  canonical.rel = 'canonical';
-  canonical.href = 'https://optioncfoundation.org' + window.location.pathname.replace(/\.html$/, '').replace(/\/$/, '') + (window.location.pathname === '/' ? '/' : '');
-  document.head.appendChild(canonical);
-})();
+  // ---- Canonical + favicon + Open Graph injection ----
+  // Adds tags to <head> on every page so they don't have to be hand-edited per file.
+  (function () {
+    const head = document.head;
+    const origin = 'https://optioncfoundation.org';
+    const path = window.location.pathname;
+    const cleanPath = path.replace(/\.html$/, '').replace(/\/$/, '');
+    const canonicalUrl = origin + cleanPath + (path === '/' ? '/' : '');
 
-// ---- Helper: fetch an HTML file and replace a placeholder element ----
+    // Helper — only add if not already present (so per-page overrides win)
+    const has = (sel) => !!head.querySelector(sel);
+    const addLink = (rel, href, attrs = {}) => {
+      const sel = `link[rel="${rel}"]` + (attrs.sizes ? `[sizes="${attrs.sizes}"]` : '') + (attrs.type ? `[type="${attrs.type}"]` : '');
+      if (has(sel)) return;
+      const el = document.createElement('link');
+      el.rel = rel;
+      el.href = href;
+      Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
+      head.appendChild(el);
+    };
+    const addMeta = (key, val, attrName = 'name') => {
+      if (has(`meta[${attrName}="${key}"]`)) return;
+      const el = document.createElement('meta');
+      el.setAttribute(attrName, key);
+      el.content = val;
+      head.appendChild(el);
+    };
+
+    // Canonical
+    addLink('canonical', canonicalUrl);
+
+    // Favicons
+    addLink('icon', '/favicon.ico', { sizes: 'any' });
+    addLink('icon', '/favicon-32.png', { type: 'image/png', sizes: '32x32' });
+    addLink('icon', '/favicon-192.png', { type: 'image/png', sizes: '192x192' });
+    addLink('apple-touch-icon', '/apple-touch-icon.png', { sizes: '180x180' });
+
+    // Open Graph + Twitter card (per-page <title>/<meta name="description"> still apply)
+    const pageTitle = document.title || 'Option C Foundation';
+    const descEl = head.querySelector('meta[name="description"]');
+    const pageDesc = descEl ? descEl.content : 'Free entrepreneurship support for adults facing employment barriers.';
+
+    addMeta('og:type', 'website', 'property');
+    addMeta('og:site_name', 'Option C Foundation', 'property');
+    addMeta('og:title', pageTitle, 'property');
+    addMeta('og:description', pageDesc, 'property');
+    addMeta('og:url', canonicalUrl, 'property');
+    addMeta('og:image', origin + '/og-image.png', 'property');
+    addMeta('og:image:width', '1200', 'property');
+    addMeta('og:image:height', '630', 'property');
+    addMeta('twitter:card', 'summary_large_image');
+    addMeta('twitter:title', pageTitle);
+    addMeta('twitter:description', pageDesc);
+    addMeta('twitter:image', origin + '/og-image.png');
+
+    // Theme color (browser chrome on mobile)
+    addMeta('theme-color', '#1F4E79');
+  })();
+
+  // ---- Helper: fetch an HTML file and replace a placeholder element ----
   async function injectComponent(placeholderId, path) {
     const placeholder = document.getElementById(placeholderId);
     if (!placeholder) return;
