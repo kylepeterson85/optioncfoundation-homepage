@@ -229,3 +229,77 @@ Unsplash images are free to use commercially without attribution, but attributio
 | Role | Name | Email |
 |------|------|-------|
 | Owner / Decision Maker | Kyle K. Peterson | info@optioncfoundation.org |
+
+
+---
+
+## 12. Donation Processing
+
+Donations are handled via **Donorbox**, embedded on `/donate.html`. Payments are processed through **Stripe**.
+
+### Donorbox
+- Dashboard: https://donorbox.org/org_admin/dashboard_v2
+- - Campaign: "Support Option C Foundation"
+  - - Login: info@optioncfoundation.org
+    - - Amounts: $25, $50, $100, $250, $500, Custom (one-time and monthly recurring)
+      - - Tax receipts sent automatically to donors
+       
+        - ### Stripe
+        - - Connected to Donorbox as the payment processor
+          - - Account name: OPTION C FOUNDATION
+            - - Accepts: credit/debit cards, Apple Pay, Google Pay
+              - - **Payouts**: Add Relay bank routing/account numbers to Stripe once Relay approves (2-3 days from application)
+               
+                - ### Relay (Business Banking — Pending Approval)
+                - - Applied at relayfi.com for nonprofit business checking account
+                  - - Once approved: go to Stripe Dashboard → Settings → Bank accounts → add Relay routing + account numbers
+                    - - All donor payouts will then deposit directly to the Option C Foundation account
+                     
+                      - ---
+
+                      ## 13. Performance & Technical Health
+
+                      *Last audited: May 3, 2026*
+
+                      ### PageSpeed Insights — optioncfoundation.org
+
+                      | Score | Mobile | Desktop |
+                      |-------|--------|---------|
+                      | Performance | 80 | 99 |
+                      | Accessibility | 93 | 93 |
+                      | Best Practices | 100 | 100 |
+                      | SEO | 100 | 100 |
+
+                      ### Optimizations Applied
+                      - **Async Google Fonts** — all 26 HTML pages use `rel="preload"` + onload swap. Eliminated ~750ms render-blocking delay on mobile. Improved mobile score from 72 to 80.
+                      - - **Schema.org JSON-LD** — NonprofitOrganization structured data added to index.html
+                        - - **Sitemap** — sitemap.xml covers all 26 indexable pages, submitted to Google Search Console
+                          - - **Broken links** — all 28 pages return HTTP 200, no broken links as of last audit
+                            - - **Privacy Policy** — linked inline near the submit button on /qualify.html
+                             
+                              - ---
+
+                              ## 14. Google Ad Grants Status
+
+                              *Updated: May 3, 2026*
+
+                              | Step | Status |
+                              |------|--------|
+                              | Google for Nonprofits registration | Approved |
+                              | Candid / GuideStar profile | Created |
+                              | Google Ad Grants application submitted | Awaiting approval (2-5 business days) |
+                              | Donation page with live payment processing | Complete — Donorbox + Stripe |
+                              | Privacy Policy linked near application form | Done — /qualify.html |
+                              | Schema.org structured data on homepage | Done — index.html |
+                              | Mobile PageSpeed score is 70 or above | Score: 80 |
+                              | SEO score | Score: 100 |
+                              | All pages return 200 / no broken links | Verified May 3, 2026 |
+
+                              ### Once Ad Grants is approved:
+                              1. Log into Google for Nonprofits and activate the Google Ads account
+                              2. 2. Create at least 2 campaigns with 2+ ad groups each
+                                 3. 3. Target keywords: "start business with felony record", "self employment with disability", "small business support disabled adults"
+                                    4. 4. Add sitelink assets to all campaigns: About, Our Program, Apply Now, Donate
+                                       5. 5. Import the GA4 form submission conversion event into Google Ads
+                                          6. 6. Monitor CTR weekly — must stay above 5% to remain compliant
+                                             7. 7. Respond to the annual Google Ad Grants compliance survey promptly each year
