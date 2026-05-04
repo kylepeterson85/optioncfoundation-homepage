@@ -3,6 +3,25 @@
    Business Building Machine Framework Page
    ============================================ */
 
+/* ===== Hero spacing fix — prevent tag from touching header ===== */
+.page-hero {
+  padding-top: 80px !important;
+}
+
+/* ===== Stage label tag inside component-content ===== */
+.stage-label-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(212, 146, 42, 0.15);
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-bottom: 8px;
+}
+
 /* ===== BBM Summary Card ===== */
 .bbm-summary-card {
   background: var(--navy);
@@ -57,30 +76,4 @@
   gap: 8px;
   margin-top: 20px;
   padding: 12px 16px;
-  background: rgba(255,255,255,0.06);
-  border-left: 3px solid var(--gold);
-  border-radius: 0 8px 8px 0;
-  font-size: 13px;
-  font-weight: 600;
-  color: rgba(255,255,255,0.75);
-  font-style: italic;
-}
-
-.stage-rule svg {
-  flex-shrink: 0;
-  margin-top: 1px;
-  color: var(--gold);
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 640px) {
-  .bbm-stage-summary {
-    gap: 8px;
-  }
-
-  .bbm-stage-num {
-    width: 32px;
-    height: 32px;
-    font-size: 11px;
-  }
-}
+  background: r
