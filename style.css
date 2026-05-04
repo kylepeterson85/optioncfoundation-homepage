@@ -572,6 +572,17 @@ h3 { font-size: 19px; margin-bottom: 10px; font-weight: 700; }
   margin: 0 auto 12px;
   box-shadow: var(--shadow-md);
 }
+.founder-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  margin: 0 auto 12px;
+  box-shadow: var(--shadow-md);
+  display: block;
+  border: 3px solid var(--white);
+}
 .founder-role {
   font-size: 13px;
   font-weight: 700;
