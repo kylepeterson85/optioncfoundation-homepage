@@ -301,6 +301,12 @@
 .post-body ul, .post-body ol { margin: 0 0 20px 24px; }
 .post-body li { margin-bottom: 8px; color: var(--text-mid); line-height: 1.7; }
 .post-body a { color: var(--green); font-weight: 600; }
+/* Override link color for buttons inside post body */
+.post-body a.btn-primary,
+.post-body a.btn-primary:hover { color: var(--white); }
+.post-body a.btn-outline,
+.post-body a.btn-outline:hover { color: var(--navy); }
+.post-body a.btn-outline:hover { color: var(--white); }
 .post-lead { font-size: 20px; color: var(--text-mid); line-height: 1.65; font-weight: 400; }
 .post-body blockquote {
   margin: 32px 0;
