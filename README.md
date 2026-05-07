@@ -3,7 +3,7 @@
 **Live site:** https://optioncfoundation.org  
 **GitHub repo:** https://github.com/kylepeterson85/optioncfoundation-homepage  
 **Owner:** Kyle K. Peterson · info@optioncfoundation.org  
-**Last major update:** April 29, 2026
+**Last major update:** May 7, 2026 (mobile performance patch — see Section 13)
 
 ---
 
@@ -37,6 +37,7 @@ If you need to request a change — new page, content update, design adjustment,
 ├── style.css             ← Global styles (shared across all pages)
 ├── script.js             ← Global JavaScript (nav toggle, scroll effects, FAQ accordion)
 │
+├── netlify.toml          ← Netlify config — sets long-term cache headers for CSS/JS/images/fonts
 ├── sitemap.xml           ← XML sitemap — update when adding new pages
 ├── robots.txt            ← Crawler rules — points to sitemap, blocks utility pages
 │
@@ -257,27 +258,55 @@ Donations are handled via **Donorbox**, embedded on `/donate.html`. Payments are
                      
                       - ---
 
-                      ## 13. Performance & Technical Health
+## 13. Performance & Technical Health
 
-                      *Last audited: May 3, 2026*
+*Last audited: May 7, 2026*
 
-                      ### PageSpeed Insights — optioncfoundation.org
+### PageSpeed Insights — optioncfoundation.org
 
-                      | Score | Mobile | Desktop |
-                      |-------|--------|---------|
-                      | Performance | 80 | 99 |
-                      | Accessibility | 93 | 93 |
-                      | Best Practices | 100 | 100 |
-                      | SEO | 100 | 100 |
+| Category | Mobile (target) | Desktop |
+|---|---|---|
+| Performance | 80+ (was 71 before May 7 patch) | 99 |
+| Accessibility | 93 | 93 |
+| Best Practices | 100 | 100 |
+| SEO | 100 | 100 |
 
-                      ### Optimizations Applied
-                      - **Async Google Fonts** — all 26 HTML pages use `rel="preload"` + onload swap. Eliminated ~750ms render-blocking delay on mobile. Improved mobile score from 72 to 80.
-                      - - **Schema.org JSON-LD** — NonprofitOrganization structured data added to index.html
-                        - - **Sitemap** — sitemap.xml covers all 26 indexable pages, submitted to Google Search Console
-                          - - **Broken links** — all 28 pages return HTTP 200, no broken links as of last audit
-                            - - **Privacy Policy** — linked inline near the submit button on /qualify.html
-                             
-                              - ---
+### Optimizations Applied — May 7, 2026 perf patch (homepage)
+
+This batch of changes was made specifically to move the mobile Performance score from 71 to 80+. Only `index.html` was touched plus a new top-level `netlify.toml`.
+
+- **Long-term asset caching via `netlify.toml`** — biggest single win. Before: every CSS, JS, font, and image was returned with `cache-control: public, max-age=0, must-revalidate`, forcing mobile users to re-download every asset on every page load. After: CSS/JS/images/fonts are cached for 1 year with `immutable`. Page HTML is still `max-age=0` so content edits go live instantly.
+- **Non-blocking stylesheet** — `style.css` switched from a standard `<link rel="stylesheet">` to a `rel="preload"` + onload swap pattern. Removes the render-blocking critical-path CSS delay.
+- **Trimmed Google Fonts** — Inter dropped from 5 weights (`400;500;600;700;800`) to 2 (`400;700`). Saves ~70KB on mobile. Headings still render bold; body still renders regular.
+- **Deferred scripts** — `components/loader.js` and `script.js` now have the `defer` attribute, so they no longer block HTML parsing.
+- **Layout-shift fix (CLS)** — `#header-placeholder` and `#footer-placeholder` now have a reserved `min-height` in CSS, so the page no longer visually jumps when `loader.js` injects the real header/footer after page load.
+- **Lazy-loaded founder photo** — `kyle-headshot.webp` got `width="800"`, `height="800"`, `loading="lazy"`, and `decoding="async"`. Below-fold image is no longer downloaded until the user scrolls to it.
+- **Backup created** — pre-patch homepage saved as `index-pre-perf-fix.html` if a rollback is ever needed.
+
+### CRITICAL — Asset Cache-Busting Rule
+
+`netlify.toml` sets CSS/JS/images/fonts to `immutable` with a 1-year cache. **If you change any of those files, returning visitors will keep the OLD cached version unless the file path changes.** When editing `style.css`, `script.js`, `loader.js`, or any CSS/JS file:
+
+- Either rename the file (e.g. `style.css` → `style.v2.css`) and update every `<link>` / `<script>` reference
+- OR append a version query string in the HTML: `<link href="style.css?v=2" ...>`
+
+Page HTML is NOT cached this way, so HTML content edits always go live immediately.
+
+### Earlier optimizations still in place
+- **Schema.org JSON-LD** — NonprofitOrganization structured data on `index.html`
+- **Sitemap** — `sitemap.xml` covers all indexable pages, submitted to Google Search Console
+- **No broken links** — all pages return HTTP 200 (last verified May 3, 2026)
+- **Privacy Policy** — linked inline near submit button on `/qualify.html`
+
+### Recommended next step (optional)
+
+The May 7 patch covers the homepage only. If desktop pages also score below 80, apply the same head-section pattern (preload CSS, trimmed fonts, deferred scripts, placeholder min-heights, image lazy attrs) to the other HTML pages. The `netlify.toml` already benefits every page site-wide.
+
+### GTM note
+
+Google Tag Manager is injected via Netlify Snippet Injection, not hardcoded in the HTML. To prevent GTM from blocking first paint, the GTM head snippet in **Site configuration → Build & deploy → Post processing → Snippet injection** can be wrapped with `window.addEventListener('load', function () { ... })` so it loads after the page is interactive. Tracking still works; LCP improves.
+
+---
 
                               ## 14. Google Ad Grants Status
 
