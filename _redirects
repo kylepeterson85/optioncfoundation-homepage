@@ -9,5 +9,5 @@
 
 # Generic blog post URL — renamed to descriptive slug for SEO / Ad Grants.
 # Any inbound links to the old URL will land on the canonical page.
-/blog-post   /blog-entrepreneurship-accessible-path   301
-/blog-post.html   /blog-entrepreneurship-accessible-path   301
+/blog-post   /blog-entrepreneurship-accessible-path   301!
+/blog-post.html   /blog-entrepreneurship-accessible-path   301!
