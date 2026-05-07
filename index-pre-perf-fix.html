@@ -5,15 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Option C Foundation | We Build Real Small Businesses for People Facing Barriers — Free</title>
   <meta name="description" content="Option C Foundation is a 501(c)(3) nonprofit that gives qualified adults a complete, free small-business launch package — a 20+ page business plan, custom website, hosting, logo, SEO, Google Business Profile, social media setup, and one-on-one mentorship — powered by our 6-stage Business Building Machine framework." />
-  <!-- PERF: stylesheet preloaded so it doesn't block first paint -->
-  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="style.css" /></noscript>
-
+  <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- PERF: trimmed Inter from 5 weights to 2 (regular + bold) — saves ~70KB on mobile -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" /></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
 
   <!-- Schema.org: NonprofitOrganization structured data for Google -->
   <script type="application/ld+json">
@@ -109,16 +104,6 @@
     .trust-callout-icon { width: 56px; height: 56px; border-radius: 50%; background: var(--green); color: var(--white); display: inline-flex; align-items: center; justify-content: center; }
     .trust-callout-text strong { color: var(--text-dark); }
     .trust-callout-text p { color: var(--text-mid); font-size: 15px; line-height: 1.7; margin: 0; }
-
-    /* PERF / CLS FIX: reserve vertical space for the header + footer
-       that components/loader.js injects after page load, so the page
-       doesn't visually "jump" once they appear. */
-    #header-placeholder { display: block; min-height: 72px; }
-    #footer-placeholder { display: block; min-height: 320px; background: var(--navy-dark, #0f1e30); }
-    @media (max-width: 768px) {
-      #header-placeholder { min-height: 64px; }
-      #footer-placeholder { min-height: 480px; }
-    }
   </style>
 </head>
 <body>
@@ -651,7 +636,7 @@
   <section class="section" id="leadership">
     <div class="container founder-layout">
       <div class="founder-card">
-        <img src="kyle-headshot.webp" alt="Kyle K. Peterson, Founder of Option C Foundation" class="founder-photo" width="800" height="800" loading="lazy" decoding="async" />
+        <img src="kyle-headshot.webp" alt="Kyle K. Peterson, Founder of Option C Foundation" class="founder-photo" />
         <div class="founder-role">Founder</div>
       </div>
       <div class="founder-copy">
@@ -781,19 +766,4 @@
     <div class="container cta-inner">
       <div class="section-tag light">Get Started</div>
       <h2>Ready to Build Something of Your Own?</h2>
-      <p>If traditional employment hasn't worked for you, Option C may be able to help you build another path through entrepreneurship — with a real business plan, a real website, real branding, and real mentorship. Apply now to see if you qualify. There's no cost. There's no commitment.</p>
-      <div class="cta-actions">
-        <a href="qualify.html" class="btn btn-white btn-lg">See If You Qualify</a>
-        <a href="donate.html" class="btn btn-outline-white btn-lg">Support the Mission</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <div id="footer-placeholder"></div>
-
-  <!-- PERF: scripts deferred so they don't block parsing -->
-  <script src="components/loader.js" defer></script>
-  <script src="script.js" defer></script>
-</body>
-</html>
+      <p>If traditional employment hasn't worked for you, Option C may be able to help you build another path through entrepreneurship — with a real business plan, a real website, real branding, and real mentorship. Apply now to see if you qualify. There's 

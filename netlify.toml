@@ -1,0 +1,97 @@
+# =====================================================
+# Option C Foundation — Netlify configuration
+# Purpose: serve static assets with proper long-term
+# caching so PageSpeed mobile score improves from 71 -> 80+
+#
+# IMPORTANT: with `immutable` caching, if you later change
+# style.css / script.js / loader.js etc. you must either:
+#   (a) rename the file (style.v2.css), OR
+#   (b) append a query string in your HTML (style.css?v=2)
+# Otherwise returning visitors will keep the old cached file.
+# =====================================================
+
+# ---------- CSS ----------
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# ---------- JavaScript ----------
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/components/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# ---------- Images ----------
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.avif"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpeg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# ---------- Fonts ----------
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# ---------- Header / footer HTML fragments ----------
+# These are fetched by components/loader.js. Cache for 1 hour
+# with revalidation so updates show up quickly without
+# hammering the server on every page nav.
+[[headers]]
+  for = "/components/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+# ---------- Page HTML ----------
+# Keep page HTML at 0 cache with revalidate so content
+# edits go live immediately (this matches current behavior).
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
