@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="donate.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
 </head>
 <body>
 
@@ -126,47 +126,22 @@
       </div>
       <div class="donate-options-layout">
         <div class="donate-main-card">
-          <div class="donate-amounts">
-            <div class="amount-label">Select or enter an amount</div>
-            <div class="amount-buttons">
-              <button class="amount-btn" data-amount="25">$25</button>
-              <button class="amount-btn active" data-amount="50">$50</button>
-              <button class="amount-btn" data-amount="100">$100</button>
-              <button class="amount-btn" data-amount="250">$250</button>
-              <button class="amount-btn" data-amount="500">$500</button>
-              <button class="amount-btn amount-custom" data-amount="custom">Custom</button>
-            </div>
-            <div class="custom-amount-wrap" id="custom-amount-wrap" style="display:none;">
-              <div class="custom-amount-input-wrap">
-                <span class="dollar-sign">$</span>
-                <input type="number" id="custom-amount" placeholder="Enter amount" min="1" />
-              </div>
-            </div>
-          </div>
-
-          <div class="donate-frequency">
-            <div class="amount-label">Donation frequency</div>
-            <div class="frequency-tabs">
-              <button class="freq-tab active" data-freq="one-time">One-Time</button>
-              <button class="freq-tab" data-freq="monthly">Monthly</button>
-            </div>
-          </div>
 
           <div class="donate-submit-area">
-            <!-- Placeholder — replace href with real payment processor URL (Stripe, PayPal, Donorbox, etc.) -->
-            <a href="contact.html" class="btn btn-primary btn-lg donate-cta-btn" id="donate-cta">
+            <a href="https://donorbox.org/support-option-c-foundation" class="btn btn-primary btn-lg donate-cta-btn" id="donate-cta">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-              Donate $50 Now
+              Donate Securely via Donorbox →
             </a>
             <p class="donate-note">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              Option C Foundation is a 501(c)(3) nonprofit. Your donation is tax-deductible. You'll receive a written acknowledgment for your records.
+              Option C Foundation is a 501(c)(3) nonprofit. Your donation is tax-deductible. You&#x2019;ll receive a written acknowledgment for your records.
+            </p>
+            <p class="donate-note" style="margin-top:8px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              We use Donorbox + Stripe for secure donation processing.
             </p>
           </div>
 
-          <div class="donate-alt">
-            <p>Prefer to donate by check or another method? <a href="contact.html">Contact us</a> and we'll provide instructions.</p>
-          </div>
         </div>
 
         <div class="donate-sidebar">
@@ -203,7 +178,6 @@
     </div>
   </section>
 
-  <!-- ===== WAYS TO HELP ===== -->
   <section class="section" id="ways-to-help">
     <div class="container">
       <div class="section-intro center">
@@ -228,7 +202,7 @@
           </div>
           <h3>Volunteer as a Mentor</h3>
           <p>If you have business experience and want to give back, consider volunteering as a mentor. We match mentors with participants based on industry and goals.</p>
-          <a href="contact.html" class="btn btn-outline full-width">Learn About Mentoring</a>
+          <a href="/volunteer.html" class="btn btn-outline full-width">Learn About Mentoring</a>
         </div>
 
         <div class="way-card">
@@ -246,7 +220,7 @@
           </div>
           <h3>Become a Referral Partner</h3>
           <p>Reentry programs, disability service providers, workforce organizations, and social service agencies can establish formal referral partnerships with Option C.</p>
-          <a href="contact.html" class="btn btn-outline full-width">Contact Us About Partnering</a>
+          <a href="/partners.html" class="btn btn-outline full-width">Contact Us About Partnering</a>
         </div>
 
         <div class="way-card">
@@ -336,7 +310,7 @@
       <p>Behind every application to Option C is a person who has faced real barriers — and who is still trying. Your support helps us meet them where they are and help them build something of their own.</p>
       <div class="cta-actions">
         <a href="#donate-now" class="btn btn-white btn-lg">Donate Now</a>
-        <a href="contact.html" class="btn btn-outline-white btn-lg">Other Ways to Help</a>
+        <a href="#ways-to-help" class="btn btn-outline-white btn-lg">Other Ways to Help</a>
       </div>
     </div>
   </section>
@@ -390,12 +364,30 @@
     </div>
   </section>
 
-<!-- ===== FOOTER ===== -->
-    <!-- ===== FOOTER (loaded from /components/footer.html) ===== -->
+  <!-- ===== PHOTO SPLIT ===== -->
+  <section class="section ">
+    <div class="container photo-split">
+          <div class="photo-split-text">
+        <div class="section-tag">Real Impact</div>
+        <h2>Every Dollar Goes Toward Real People Building Real Businesses</h2>
+        <p>Option C Foundation is a lean nonprofit. Donations go directly toward the program — funding mentor coordination, participant support, business planning resources, and the operational infrastructure that makes it all possible. Every person who goes through this program does so because donors believed the investment was worth making.</p>
+        <a href="/donate.html#donate-now" class="btn btn-primary" style="margin-top:24px;">Donate Now</a>
+      </div>
+          <div class="photo-split-image">
+        <img
+          src="https://images.unsplash.com/photo-1776039325022-d2932dbd5cf2?w=900&auto=format&q=80"
+          alt="Diverse group of adults engaged in a collaborative business discussion, representing the community Option C Foundation supports"
+          loading="lazy" decoding="async"
+          class="split-photo"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER (loaded from /components/footer.html) ===== -->
   <div id="footer-placeholder"></div>
 
   <script src="/components/loader.js"></script>
   <script src="/script.js"></script>
-  <script src="donate.js"></script>
 </body>
 </html>

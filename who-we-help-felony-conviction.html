@@ -14,31 +14,19 @@
     <link rel="stylesheet" href="who-we-help.css">
 </head>
 <body>
-  <!-- ===== HEADER ===== -->
-  <header class="site-header" id="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-mark">C</span>
-        <span class="logo-text">Option C Foundation</span>
-      </a>
-      <nav class="main-nav" id="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="program.html">Our Program</a>
-        <a href="who-we-help.html" class="active">Who We Help</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <a href="qualify.html" class="btn btn-primary nav-cta">See If You Qualify</a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
+    <!-- ===== HEADER (loaded from /components/header.html) ===== -->
+  <div id="header-placeholder"></div>
 
     <!-- Page Hero -->
     <section class="page-hero">
     <div class="container page-hero-inner">
+      <nav class="post-breadcrumb">
+        <a href="index.html">Home</a>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="who-we-help.html">Who We Help</a>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>People With Prior Convictions</span>
+      </nav>
             <h1>Building a Legitimate Business After a Prior Conviction</h1>
             <p class="hero-subtitle">Your past does not define your potential. Option C Foundation helps adults with criminal records rebuild through legitimate entrepreneurship. We focus on your future, not your past.</p>
       <div class="hero-trust-row">
@@ -264,43 +252,34 @@
         <div class="cta-inner">
             <h2>Ready to Build Your Business?</h2>
             <p>Take the next step. See if you qualify for Option C Foundation's free business launch program.</p>
-            <a href="contact.html" class="btn btn-primary btn-lg">See If You Qualify</a>
+            <a href="qualify.html" class="btn btn-primary btn-lg">See If You Qualify</a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Option C Foundation</h3>
-                    <p>Supporting entrepreneurs facing barriers through free business mentorship, planning, and launch support.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="program.html">Our Program</a></li>
-                        <li><a href="who-we-help.html">Who We Help</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms-of-use.html">Terms of Use</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Option C Foundation. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+      <!-- ===== FOOTER (loaded from /components/footer.html) ===== -->
+  <!-- ===== PHOTO SPLIT ===== -->
+  <section class="section bg-light">
+    <div class="container photo-split">
+          <div class="photo-split-image">
+        <img
+          src="https://images.unsplash.com/photo-1776039325022-d2932dbd5cf2?w=900&auto=format&q=80"
+          alt="Group of motivated adults in a collaborative discussion, moving forward together and building a better future"
+          loading="lazy" decoding="async"
+          class="split-photo"
+        />
+      </div>
+          <div class="photo-split-text">
+        <div class="section-tag">A Fresh Path Forward</div>
+        <h2>Your Business Doesn't Run a Background Check</h2>
+        <p>When you work for yourself, hiring decisions don't stand between you and income. What matters is the quality of your work, the reliability of your service, and the value you provide. Option C helps you build a business where what you've done is less important than what you're building now.</p>
+        <a href="/qualify.html" class="btn btn-primary" style="margin-top:24px;">See If You Qualify</a>
+      </div>
+    </div>
+  </section>
+  <div id="footer-placeholder"></div>
 
     <script src="faq.js"></script>
+  <script src="/components/loader.js"></script>
+  <script src="/script.js"></script>
 </body>
 </html>

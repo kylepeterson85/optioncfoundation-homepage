@@ -1,0 +1,13 @@
+# Netlify _redirects — Option C Foundation
+#
+# Format: from-path  to-path  status
+# Docs: https://docs.netlify.com/routing/redirects/
+
+# Legacy Terms of Use URL — protect any external bookmarks / inbound links
+# from 404ing if a visitor hits the pre-rename URL.
+/terms-of-use.html   /terms   301
+
+# Generic blog post URL — renamed to descriptive slug for SEO / Ad Grants.
+# Any inbound links to the old URL will land on the canonical page.
+/blog-post   /blog-entrepreneurship-accessible-path   301
+/blog-post.html   /blog-entrepreneurship-accessible-path   301

@@ -10,31 +10,12 @@
   <link rel="stylesheet" href="blog.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
 </head>
 <body>
 
-  <!-- ===== HEADER ===== -->
-  <header class="site-header" id="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-mark">C</span>
-        <span class="logo-text">Option C Foundation</span>
-      </a>
-      <nav class="main-nav" id="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="program.html">Our Program</a>
-        <a href="who-we-help.html">Who We Help</a>
-        <a href="blog.html" class="active">Blog</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <a href="qualify.html" class="btn btn-primary nav-cta">See If You Qualify</a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
+    <!-- ===== HEADER (loaded from /components/header.html) ===== -->
+  <div id="header-placeholder"></div>
 
   <!-- ===== PAGE HERO ===== -->
   <section class="page-hero page-hero-sm">
@@ -67,23 +48,21 @@
       <div class="featured-post blog-card" data-cat="entrepreneurship">
         <div class="featured-badge">Featured</div>
         <div class="blog-card-img featured-img">
-          <div class="img-placeholder gradient-navy">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.4"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-          </div>
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&q=80" alt="Small business owner helping a customer at their shop, showing entrepreneurship in action" loading="lazy" class="blog-card-img-photo" />
         </div>
         <div class="blog-card-body">
           <div class="post-meta">
             <span class="post-cat cat-entrepreneurship">Entrepreneurship</span>
             <span class="post-date">April 15, 2026</span>
           </div>
-          <h2 class="featured-title"><a href="blog-post.html">Why Entrepreneurship Is One of the Most Accessible Paths for People Facing Employment Barriers</a></h2>
+          <h2 class="featured-title"><a href="blog-entrepreneurship-accessible-path.html">Why Entrepreneurship Is One of the Most Accessible Paths for People Facing Employment Barriers</a></h2>
           <p class="post-excerpt">For people who have faced repeated rejection in the traditional job market — because of a disability, a prior conviction, or a long gap in employment — self-employment offers something the job market often doesn't: a path that isn't gated by background checks, HR filters, or hiring managers with biases. Here's why entrepreneurship deserves serious consideration.</p>
           <div class="post-footer">
             <div class="post-author">
-              <div class="author-avatar">KP</div>
-              <span>Kyle K. Peterson</span>
+              <div class="author-avatar" style="background:white;padding:0;overflow:hidden;"><img src="/logo.webp" alt="Option C Foundation" style="width:100%;height:100%;object-fit:contain;padding:3px;" /></div>
+              <span>Option C Foundation Team</span>
             </div>
-            <a href="blog-post.html" class="read-more-link">
+            <a href="blog-entrepreneurship-accessible-path.html" class="read-more-link">
               Read Article
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
@@ -107,8 +86,8 @@
             <p class="post-excerpt">Understanding how background checks work, what appears on them, and how employers typically respond can help people with prior convictions make more informed decisions about where to put their energy.</p>
             <div class="post-footer">
               <div class="post-author">
-                <div class="author-avatar">KP</div>
-                <span>Kyle K. Peterson</span>
+                <div class="author-avatar" style="background:white;padding:0;overflow:hidden;"><img src="/logo.webp" alt="Option C Foundation" style="width:100%;height:100%;object-fit:contain;padding:3px;" /></div>
+                <span>Option C Foundation Team</span>
               </div>
               <a href="blog-background-checks.html" class="read-more-link">Read <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             </div>
@@ -117,7 +96,7 @@
 
         <article class="blog-card post-card" data-cat="business-tips">
           <div class="blog-card-img">
-          <img src="https://images.unsplash.com/photo-1661658571095-80fd0167a812?w=600&auto=format&q=80" alt="Small business owner smiling at their reopened shop front, representing entrepreneurship and independence" loading="lazy" class="blog-card-img-photo" />
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&q=80" alt="Two people planning a small service business together at a desk with laptops and notes" loading="lazy" class="blog-card-img-photo" />
         </div>
           <div class="post-card-body">
             <div class="post-meta">
@@ -128,8 +107,8 @@
             <p class="post-excerpt">Many people think starting a business requires a big idea or a lot of startup capital. It often doesn't. Here are five realistic service businesses that can be started with limited funds and skills most people already have.</p>
             <div class="post-footer">
               <div class="post-author">
-                <div class="author-avatar">KP</div>
-                <span>Kyle K. Peterson</span>
+                <div class="author-avatar" style="background:white;padding:0;overflow:hidden;"><img src="/logo.webp" alt="Option C Foundation" style="width:100%;height:100%;object-fit:contain;padding:3px;" /></div>
+                <span>Option C Foundation Team</span>
               </div>
               <a href="blog-5-low-cost-businesses.html" class="read-more-link">Read <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             </div>
@@ -149,8 +128,8 @@
             <p class="post-excerpt">A business idea is a starting point. A business plan is a thinking tool. Most people skip from idea to "I'm going to start a business" without ever building the plan in between — and that's one of the main reasons businesses fail early.</p>
             <div class="post-footer">
               <div class="post-author">
-                <div class="author-avatar">KP</div>
-                <span>Kyle K. Peterson</span>
+                <div class="author-avatar" style="background:white;padding:0;overflow:hidden;"><img src="/logo.webp" alt="Option C Foundation" style="width:100%;height:100%;object-fit:contain;padding:3px;" /></div>
+                <span>Option C Foundation Team</span>
               </div>
               <a href="blog-idea-vs-plan.html" class="read-more-link">Read <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             </div>
@@ -159,7 +138,7 @@
 
         <article class="blog-card post-card" data-cat="employment">
           <div class="blog-card-img">
-          <img src="https://images.unsplash.com/photo-1663122607630-f7ed0f900515?w=600&auto=format&q=80" alt="Person with a disability working on a laptop with a supportive mentor, showing self-employment possibilities" loading="lazy" class="blog-card-img-photo" />
+          <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&auto=format&q=80" alt="Laptop and notebook on a desk representing flexible independent work and self-employment" loading="lazy" class="blog-card-img-photo" />
         </div>
           <div class="post-card-body">
             <div class="post-meta">
@@ -170,8 +149,8 @@
             <p class="post-excerpt">For people receiving disability benefits, starting a business raises real questions about how earnings affect benefits. Understanding the basics of how self-employment intersects with SSI, SSDI, and Medicaid is important before you begin.</p>
             <div class="post-footer">
               <div class="post-author">
-                <div class="author-avatar">KP</div>
-                <span>Kyle K. Peterson</span>
+                <div class="author-avatar" style="background:white;padding:0;overflow:hidden;"><img src="/logo.webp" alt="Option C Foundation" style="width:100%;height:100%;object-fit:contain;padding:3px;" /></div>
+                <span>Option C Foundation Team</span>
               </div>
               <a href="blog-disability-self-employment.html" class="read-more-link">Read <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             </div>
@@ -191,8 +170,8 @@
             <p class="post-excerpt">A basic online presence can make the difference between a customer trusting your business and moving on. Here's what actually matters for a small local business, and what you can realistically build without a big budget.</p>
             <div class="post-footer">
               <div class="post-author">
-                <div class="author-avatar">KP</div>
-                <span>Kyle K. Peterson</span>
+                <div class="author-avatar" style="background:white;padding:0;overflow:hidden;"><img src="/logo.webp" alt="Option C Foundation" style="width:100%;height:100%;object-fit:contain;padding:3px;" /></div>
+                <span>Option C Foundation Team</span>
               </div>
               <a href="blog-credible-online.html" class="read-more-link">Read <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             </div>
@@ -212,8 +191,8 @@
             <p class="post-excerpt">One of the clearest positions we hold at Option C is that we only support legitimate, lawful small businesses. This isn't just a policy — it's a core part of how we think about our mission and the people we serve.</p>
             <div class="post-footer">
               <div class="post-author">
-                <div class="author-avatar">KP</div>
-                <span>Kyle K. Peterson</span>
+                <div class="author-avatar" style="background:white;padding:0;overflow:hidden;"><img src="/logo.webp" alt="Option C Foundation" style="width:100%;height:100%;object-fit:contain;padding:3px;" /></div>
+                <span>Option C Foundation Team</span>
               </div>
               <a href="blog-lawful-businesses.html" class="read-more-link">Read <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             </div>
@@ -233,8 +212,8 @@
             <p class="post-excerpt">A curated list of free and low-cost resources for aspiring entrepreneurs — covering business planning, legal setup, marketing, and more. Updated for 2026.</p>
             <div class="post-footer">
               <div class="post-author">
-                <div class="author-avatar">KP</div>
-                <span>Kyle K. Peterson</span>
+                <div class="author-avatar" style="background:white;padding:0;overflow:hidden;"><img src="/logo.webp" alt="Option C Foundation" style="width:100%;height:100%;object-fit:contain;padding:3px;" /></div>
+                <span>Option C Foundation Team</span>
               </div>
               <a href="blog-free-resources.html" class="read-more-link">Read <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             </div>
@@ -254,8 +233,8 @@
             <p class="post-excerpt">Accountability is one of the most underrated factors in whether a new small business succeeds or stalls. Here's what it actually looks like in practice, and how to create it if you're building alone.</p>
             <div class="post-footer">
               <div class="post-author">
-                <div class="author-avatar">KP</div>
-                <span>Kyle K. Peterson</span>
+                <div class="author-avatar" style="background:white;padding:0;overflow:hidden;"><img src="/logo.webp" alt="Option C Foundation" style="width:100%;height:100%;object-fit:contain;padding:3px;" /></div>
+                <span>Option C Foundation Team</span>
               </div>
               <a href="blog-accountability.html" class="read-more-link">Read <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             </div>
@@ -273,33 +252,9 @@
     <!-- SIDEBAR -->
     <aside class="blog-sidebar">
 
-      <div class="sidebar-card">
-        <h3>Categories</h3>
-        <div class="category-list">
-          <a href="#" class="cat-link active" data-cat="all">
-            All Posts <span class="cat-count">9</span>
-          </a>
-          <a href="#" class="cat-link" data-cat="entrepreneurship">
-            Entrepreneurship <span class="cat-count">4</span>
-          </a>
-          <a href="#" class="cat-link" data-cat="employment">
-            Employment Barriers <span class="cat-count">2</span>
-          </a>
-          <a href="#" class="cat-link" data-cat="business-tips">
-            Business Tips <span class="cat-count">2</span>
-          </a>
-          <a href="#" class="cat-link" data-cat="program">
-            Program &amp; Updates <span class="cat-count">1</span>
-          </a>
-          <a href="#" class="cat-link" data-cat="resources">
-            Resources <span class="cat-count">1</span>
-          </a>
-        </div>
-      </div>
-
       <div class="sidebar-card about-blog-card">
         <div class="about-blog-logo">
-          <span class="logo-mark" style="width:32px;height:32px;font-size:16px;">C</span>
+          <img src="/logo.webp" alt="Option C Foundation" style="width:32px;height:32px;object-fit:contain;" />
         </div>
         <h3>About This Blog</h3>
         <p>Articles and perspectives from Option C Foundation on entrepreneurship, employment barriers, small business ownership, and building independence.</p>
@@ -315,7 +270,7 @@
       <div class="sidebar-card">
         <h3>Recent Posts</h3>
         <div class="recent-posts">
-          <a href="blog-post.html" class="recent-post">
+          <a href="blog-entrepreneurship-accessible-path.html" class="recent-post">
             <div class="recent-post-title">Why Entrepreneurship Is One of the Most Accessible Paths for People Facing Employment Barriers</div>
             <div class="recent-post-date">April 15, 2026</div>
           </a>
@@ -338,31 +293,11 @@
 
   </div><!-- end blog-layout -->
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="index.html" class="logo footer-logo">
-          <span class="logo-mark">C</span>
-          <span class="logo-text">Option C Foundation</span>
-        </a>
-        <p>Helping people build another path through entrepreneurship.</p>
-      </div>
-      <nav class="footer-nav">
-        <a href="about.html">About</a>
-        <a href="program.html">Our Program</a>
-        <a href="who-we-help.html">Who We Help</a>
-        <a href="contact.html">Contact</a>
-        <a href="donate.html">Donate</a>
-      </nav>
-      <div class="footer-bottom">
-        <p class="footer-disclaimer">Option C Foundation provides education, mentorship, and business support. Participation does not guarantee business success, income, funding, or employment.</p>
-        <p class="footer-copy">&copy; 2024 Option C Foundation. All rights reserved. 501(c)(3) Nonprofit Organization.</p>
-      </div>
-    </div>
-  </footer>
+    <!-- ===== FOOTER (loaded from /components/footer.html) ===== -->
+  <div id="footer-placeholder"></div>
 
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
   <script src="blog.js"></script>
+  <script src="/components/loader.js"></script>
 </body>
 </html>

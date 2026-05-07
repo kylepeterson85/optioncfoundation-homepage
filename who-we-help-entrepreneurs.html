@@ -14,31 +14,19 @@
     <link rel="stylesheet" href="who-we-help.css">
 </head>
 <body>
-  <!-- ===== HEADER ===== -->
-  <header class="site-header" id="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-mark">C</span>
-        <span class="logo-text">Option C Foundation</span>
-      </a>
-      <nav class="main-nav" id="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="program.html">Our Program</a>
-        <a href="who-we-help.html" class="active">Who We Help</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <a href="qualify.html" class="btn btn-primary nav-cta">See If You Qualify</a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
+    <!-- ===== HEADER (loaded from /components/header.html) ===== -->
+  <div id="header-placeholder"></div>
 
     <!-- Page Hero -->
     <section class="page-hero">
     <div class="container page-hero-inner">
+      <nav class="post-breadcrumb">
+        <a href="index.html">Home</a>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="who-we-help.html">Who We Help</a>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Aspiring Entrepreneurs</span>
+      </nav>
             <h1>You Have the Drive. We Help You Build the Plan.</h1>
             <p class="hero-subtitle">Most business failures don't happen because of bad ideas. They happen because of missing structure, unclear plans, lack of mentorship, and no accountability. Option C Foundation provides all of these free.</p>
       <div class="hero-trust-row">
@@ -243,7 +231,7 @@
                         <span class="faq-toggle">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Our core program is 12-16 weeks. Most participants launch their first business within this timeframe. Some move faster, some need additional time to plan. The timeline depends on your business type and how quickly you move through planning and customer acquisition.</p>
+                        <p>It varies. Most participants move from idea to active launch over the course of a few months &mdash; some faster, some slower. The pace depends on your business type, how quickly you can move through planning and customer acquisition, and your own situation. We design the program to be flexible rather than time-boxed.</p>
                     </div>
                 </div>
 
@@ -265,43 +253,34 @@
         <div class="cta-inner">
             <h2>Ready to Turn Your Idea Into Reality?</h2>
             <p>Take the next step. See if you qualify for Option C Foundation's free business launch program.</p>
-            <a href="contact.html" class="btn btn-primary btn-lg">See If You Qualify</a>
+            <a href="qualify.html" class="btn btn-primary btn-lg">See If You Qualify</a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Option C Foundation</h3>
-                    <p>Supporting entrepreneurs facing barriers through free business mentorship, planning, and launch support.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="program.html">Our Program</a></li>
-                        <li><a href="who-we-help.html">Who We Help</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms-of-use.html">Terms of Use</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Option C Foundation. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+      <!-- ===== FOOTER (loaded from /components/footer.html) ===== -->
+  <!-- ===== PHOTO SPLIT ===== -->
+  <section class="section bg-light">
+    <div class="container photo-split">
+          <div class="photo-split-image">
+        <img
+          src="https://images.unsplash.com/photo-1661658571095-80fd0167a812?w=900&auto=format&q=80"
+          alt="Small business owner standing confidently representing entrepreneurship and independence"
+          loading="lazy" decoding="async"
+          class="split-photo"
+        />
+      </div>
+          <div class="photo-split-text">
+        <div class="section-tag">Turn Your Idea Into a Real Business</div>
+        <h2>Having an Idea Is the Beginning — Structure Is What Makes It Real</h2>
+        <p>Many aspiring entrepreneurs have a solid concept but no framework for building it into an actual operating business. Without structure, mentorship, and accountability, most good ideas stay ideas. Option C gives you the system, the support, and the guidance to move from concept to launch.</p>
+        <a href="/qualify.html" class="btn btn-primary" style="margin-top:24px;">See If You Qualify</a>
+      </div>
+    </div>
+  </section>
+  <div id="footer-placeholder"></div>
 
     <script src="faq.js"></script>
+  <script src="/components/loader.js"></script>
+  <script src="/script.js"></script>
 </body>
 </html>

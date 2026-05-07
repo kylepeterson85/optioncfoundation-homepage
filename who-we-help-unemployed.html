@@ -14,31 +14,19 @@
     <link rel="stylesheet" href="who-we-help.css">
 </head>
 <body>
-  <!-- ===== HEADER ===== -->
-  <header class="site-header" id="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-mark">C</span>
-        <span class="logo-text">Option C Foundation</span>
-      </a>
-      <nav class="main-nav" id="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="program.html">Our Program</a>
-        <a href="who-we-help.html" class="active">Who We Help</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <a href="qualify.html" class="btn btn-primary nav-cta">See If You Qualify</a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
+    <!-- ===== HEADER (loaded from /components/header.html) ===== -->
+  <div id="header-placeholder"></div>
 
     <!-- Page Hero -->
     <section class="page-hero">
     <div class="container page-hero-inner">
+      <nav class="post-breadcrumb">
+        <a href="index.html">Home</a>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="who-we-help.html">Who We Help</a>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Long-Term Unemployed Adults</span>
+      </nav>
             <h1>Breaking the Cycle of Long-Term Unemployment Through Entrepreneurship</h1>
             <p class="hero-subtitle">Long unemployment is not a reflection of your abilities. It's a broken system that gates opportunity based on job history. Self-employment removes these gates. Option C Foundation shows you how to build a different path.</p>
       <div class="hero-trust-row">
@@ -204,7 +192,7 @@
                         <span class="faq-toggle">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>That varies widely by business type. Some businesses can make their first sale within weeks. Others take 2-3 months of planning and setup. Our goal is to help you launch your first business within 12-16 weeks of starting the program. Many people generate income sooner, but we plan conservatively.</p>
+                        <p>It varies widely by business type. Some businesses can make a first sale within weeks. Others take a few months of planning and setup. We design the program around your actual situation rather than a fixed timeline &mdash; many participants generate income sooner than planned, and we plan conservatively so we&rsquo;re not setting unrealistic expectations.</p>
                     </div>
                 </div>
 
@@ -236,43 +224,34 @@
         <div class="cta-inner">
             <h2>Ready to Build a Different Path?</h2>
             <p>See if you qualify for Option C Foundation's free entrepreneurship program for long-term unemployed adults.</p>
-            <a href="contact.html" class="btn btn-primary btn-lg">See If You Qualify</a>
+            <a href="qualify.html" class="btn btn-primary btn-lg">See If You Qualify</a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Option C Foundation</h3>
-                    <p>Supporting entrepreneurs facing barriers through free business mentorship, planning, and launch support.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="program.html">Our Program</a></li>
-                        <li><a href="who-we-help.html">Who We Help</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms-of-use.html">Terms of Use</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Option C Foundation. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+      <!-- ===== FOOTER (loaded from /components/footer.html) ===== -->
+  <!-- ===== PHOTO SPLIT ===== -->
+  <section class="section bg-light">
+    <div class="container photo-split">
+          <div class="photo-split-image">
+        <img
+          src="https://images.unsplash.com/photo-1648747067002-e0872aae5eac?w=900&auto=format&q=80"
+          alt="Person building their online presence and digital business foundation on a laptop, creating a new professional path"
+          loading="lazy" decoding="async"
+          class="split-photo"
+        />
+      </div>
+          <div class="photo-split-text">
+        <div class="section-tag">Create Your Own Opportunity</div>
+        <h2>Stop Waiting for a Callback — Build Something of Your Own</h2>
+        <p>Long-term unemployment can erode confidence and close off options. But entrepreneurship is one path that stays open regardless of how long you've been out of work or how many applications have gone unanswered. Option C helps you redirect that energy into building something you control.</p>
+        <a href="/qualify.html" class="btn btn-primary" style="margin-top:24px;">See If You Qualify</a>
+      </div>
+    </div>
+  </section>
+  <div id="footer-placeholder"></div>
 
     <script src="faq.js"></script>
+  <script src="/components/loader.js"></script>
+  <script src="/script.js"></script>
 </body>
 </html>

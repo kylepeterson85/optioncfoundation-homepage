@@ -183,6 +183,17 @@
   margin-bottom: 18px;
   box-shadow: var(--shadow-md);
 }
+.founder-photo-lg {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow-md);
+  display: block;
+  border: 3px solid var(--white);
+}
 .founder-name {
   font-size: 18px;
   font-weight: 800;
