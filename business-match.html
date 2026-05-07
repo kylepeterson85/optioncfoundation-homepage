@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Your Business Match | Free Quiz | Option C Foundation</title>
+  <meta name="description" content="Take our free 2-minute quiz and get 3 personalized small business ideas matched to your budget, skills, and situation. Built for adults facing employment barriers." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="qualify.css" />
+  <link rel="stylesheet" href="business-match.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
+</head>
+<body>
+
+  <!-- ===== HEADER (loaded from /components/header.html) ===== -->
+  <div id="header-placeholder"></div>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <div class="section-tag">Free Quiz · 2 Minutes</div>
+      <h1>Find Your Business Match</h1>
+      <p>Answer 7 quick questions and get 3 small business ideas matched to your budget, your skills, and your situation. No fluff. No download. No cost.</p>
+      <div class="hero-trust-row">
+        <div class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          100% Free
+        </div>
+        <div class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          About 2 Minutes
+        </div>
+        <div class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          501(c)(3) Nonprofit
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HIDDEN NETLIFY FORM (for build-time detection) ===== -->
+  <!-- This static form lets Netlify detect the form schema. The real
+       submission is sent via fetch() in business-match.js. -->
+  <form name="business-match" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="text" name="first_name" />
+    <input type="email" name="email" />
+    <input type="text" name="q1_budget" />
+    <input type="text" name="q2_hours" />
+    <input type="text" name="q3_physical" />
+    <input type="text" name="q4_social" />
+    <input type="text" name="q5_skills" />
+    <input type="text" name="q6_location" />
+    <input type="text" name="q7_goal" />
+    <input type="text" name="top_match_1" />
+    <input type="text" name="top_match_2" />
+    <input type="text" name="top_match_3" />
+    <input type="text" name="source" />
+    <input type="text" name="bot-field" />
+  </form>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="container quiz-wrap">
+
+    <main class="quiz-main">
+
+      <!-- ===== STATE 1: QUIZ ===== -->
+      <section id="quiz-state" class="quiz-card" aria-live="polite">
+
+        <!-- Progress bar -->
+        <div class="quiz-progress" aria-hidden="true">
+          <div class="quiz-progress-bar" id="progress-bar" style="width:0%"></div>
+        </div>
+        <div class="quiz-progress-meta">
+          <span id="progress-label">Question 1 of 7</span>
+          <span id="progress-percent">0%</span>
+        </div>
+
+        <!-- Questions get rendered here -->
+        <div id="question-container" class="question-container"></div>
+
+        <!-- Nav buttons -->
+        <div class="quiz-nav">
+          <button type="button" class="btn btn-outline btn-back" id="btn-back" disabled>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            Back
+          </button>
+          <button type="button" class="btn btn-primary btn-next" id="btn-next" disabled>
+            Next
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- ===== STATE 2: EMAIL GATE ===== -->
+      <section id="email-state" class="quiz-card hidden">
+        <div class="email-gate">
+          <div class="email-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h2>Your matches are ready</h2>
+          <p class="email-gate-sub">We've matched you to <strong>3 business ideas</strong> based on your answers. Tell us where to send your results so you have them saved &mdash; you'll see them on the next screen instantly.</p>
+
+          <form id="lead-form" class="lead-form" novalidate>
+            <div class="form-group">
+              <label for="first_name">First Name <span class="required">*</span></label>
+              <input type="text" id="first_name" name="first_name" placeholder="First name" autocomplete="given-name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email" required />
+            </div>
+            <p class="form-error" id="form-error" hidden></p>
+            <button type="submit" class="btn btn-primary btn-lg full-width" id="btn-submit">
+              Show My Matches
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <p class="form-fineprint">We'll never sell your info. You can unsubscribe at any time. Reading our <a href="/privacy-policy.html">privacy policy</a>.</p>
+          </form>
+        </div>
+      </section>
+
+      <!-- ===== STATE 3: RESULTS ===== -->
+      <section id="results-state" class="quiz-card hidden">
+        <div class="results-header">
+          <div class="section-tag" style="margin-bottom:12px;">Your Personalized Matches</div>
+          <h2 id="results-greeting">Here are your top 3 business matches</h2>
+          <p class="results-sub">Each one is matched to your budget, time, skills, and situation. Click any card to see why it fits and what to do first.</p>
+        </div>
+
+        <!-- Result cards rendered here -->
+        <div id="results-container" class="results-container"></div>
+
+        <!-- CTA card -->
+        <div class="results-cta-card">
+          <div class="cta-content">
+            <div class="section-tag" style="margin-bottom:12px; background: rgba(46,125,85,0.15);">Ready to Build It?</div>
+            <h3>Let Option C build your business <em>with</em> you &mdash; for free.</h3>
+            <p>If you're a serious about turning one of these ideas into a real business, our 501(c)(3) nonprofit program covers the whole launch &mdash; LLC formation, website, branding, Google Business Profile, SEO, and one-on-one mentorship. No cost to qualified participants.</p>
+          </div>
+          <div class="cta-actions">
+            <a href="/qualify.html" class="btn btn-primary btn-lg">See If You Qualify</a>
+            <a href="/program.html" class="btn btn-outline">Learn About the Program</a>
+          </div>
+        </div>
+
+        <!-- Restart -->
+        <div class="results-footer">
+          <button type="button" class="btn-text" id="btn-restart">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+            Retake the quiz
+          </button>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="quiz-sidebar">
+      <div class="sidebar-card">
+        <h3>Why we built this</h3>
+        <p style="font-size:14px; color:var(--text-mid); line-height:1.65;">Most people stuck on "what business should I even start" don't need more options &mdash; they need the <em>right</em> options for their situation. This quiz pulls from real businesses our participants have launched.</p>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>What you'll get</h3>
+        <ul class="eligibility-list">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>3 business ideas matched to <strong>your situation</strong></span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Realistic startup cost &amp; time to first dollar</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>The first 3 steps to take this week</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Why each idea fits <strong>you</strong> specifically</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card eligibility-card">
+        <h3>Need a real launch partner?</h3>
+        <p style="font-size:13px; color:var(--text-mid); line-height:1.6; margin-bottom:14px;">If you're an adult facing employment barriers, our nonprofit program will build the whole business with you &mdash; at no cost.</p>
+        <a href="/qualify.html" class="btn btn-primary sidebar-btn">See If You Qualify</a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <div id="footer-placeholder"></div>
+  <script src="/components/loader.js"></script>
+  <script src="/script.js"></script>
+  <script src="/business-match.js"></script>
+</body>
+</html>
